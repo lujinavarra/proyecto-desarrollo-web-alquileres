@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haus</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="../img/Logo.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="body">
+        <header>
+            <!--fila de logo y nav-->
+            <div>
+                <!--aca va la imagen del logo-->
+                <a href="../index.html"><img src="../img/Logo.png" alt="logo"></a>
+            </div>
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item"><a aria-current="page" href="../index.html">Inicio</a></li>
+                            <li class="nav-item"><a href="./inmuebles.html">Inmuebles</a></li>
+                            <li class="nav-item"><a href="./inmobiliarias.html">Inmobiliarias</a></li>
+                            <li class="nav-item"><a href="./contacto.html">Contacto</a></li>
+                            <li class="nav-item"><a class="boton" href="./ingreso.html">Ingresar</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="linea"></div>
+        <!--linea horizontal-->
+        <main class="main gridContenedorContacto"> 
+            <section class="promocion">
+                <img src="../img/promocion.png" alt="promocion">
+                <h2>¿Querés publicar en Haus?</h2>
+                <h3>Conocé nuestros servicios o envianos tu consulta</h3>
+                <a href="#pie"><button class="boton">Nuestros Servicios</button></a>
+            </section><br>
+            <section class="mapa">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3377.2117899463074!2d-64.14848438513376!3d-32.171563140401645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95cd6f55764a2cd5%3A0x26adc4b2b8734db!2zw4FuZ2VsIFYuIFBlw7FhbG96YSAyMDE2LCBSw61vIFRlcmNlcm8sIEPDs3Jkb2Jh!5e0!3m2!1ses-419!2sar!4v1666783810561!5m2!1ses-419!2sar"
+                    width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">Ubicación</iframe>
+            </section>
+            <section class="contacto">
+                <!--formulario de contacto-->
+                <form action="">
+                    <label for="nombre-y-apellido">Nombre y Apellido<input class="input" name="nombre-y-apellido" type="text"
+                            required></label><br>
+                    <label for="nombre-de-la-inmobiliaria">Nombre de la Inmobiliaria<input class="input"
+                            name="nombre-de-la-inmobiliaria" type="text" required></label><br>
+                    <label for="telefono">Teléfono<input class="input" name="telefono" type="text" required></label><br>
+                    <label for="e-mail">E-mail<input class="input" name="e-mail" type="email" required></label><br>
+                    <label for="consulta">Consulta<textarea class="input textarea" name="consulta" cols="30" rows="10"></textarea></label><br>
+                    <input type="button" value="Enviar" class="boton">
+                </form>
+            </section>
+        </main>
+        <div class="linea"></div>
+        <!--linea horizontal-->
+        <footer id="pie">
+            <div class="redes">
+                <div class="copyright">
+                    <!--logo de copyright y redes sociales-->
+                    <img src="../img/simbolo-de-copyright.png" alt="copyright">
+                    <h3>haus.com - 2022</h3>
+                </div>
+                <div class="contactosRedes">
+                    <a href="https://es-la.facebook.com/" target="_blank"><img src="../img/facebook.png"
+                            alt="facebook"></a>
+                    <!--logo y enlace facebook-->
+                    <a href="https://twitter.com/?lang=es" target="_blank"><img src="../img/gorjeo.png"
+                            alt="twitter"></a>
+                    <!--logo y enlace twitter-->
+                    <a href="https://www.instagram.com/" target="_blank"><img src="../img/instagram.png"
+                            alt="instagram"></a>
+                    <!--logo y enlace instagram-->
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+
+</html>

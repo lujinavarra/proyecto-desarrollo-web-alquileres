@@ -1,0 +1,787 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+/* selectores para todo el sitio*/
+body .body {
+    background-color: #C29689;
+    /* background: rgb(223,26,236);
+    background: linear-gradient(90deg, rgba(223,26,236,0.9836309523809523) 0%, rgba(194,150,137,1) 100%); */
+    min-height: 100vh;
+}
+
+body .linea {
+    border-top: 2px solid #3C7566;
+    height: 2px;
+    max-width: 90vw;
+    padding: 0;
+    margin: auto;
+}
+/* HEADER*/
+header div a img {
+    width: 80px;
+    height: 80px;
+    margin: 5px;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    background-color: #C29689;
+    padding: 0;
+    margin: 0;
+}
+
+
+header nav ul li {
+    list-style-type: none;
+}
+header nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 5px;
+    margin: 5px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*estilo de boton para ingresar, buscar, conocer servicios, enviar solicitud de contacto*/
+header nav ul li .boton,
+body div main div section form div .boton,
+body div main section a .boton,
+body div main section form .boton,
+body div main div section form .boton, body div main div section div .boton,
+body div main div section form .boton,
+body div main div section .boton {
+    color: white;
+    background-color: black;
+    padding: 10px;
+    border-radius: 5%;
+    margin-right: 20px;
+}
+
+header nav ul li .boton:hover {
+    color: black;
+    background-color: white;
+    transition: 2s;
+}
+/* MAIN*/
+/* selectores principalmente del index*/
+body div .main {
+    min-height: 75vh;
+    display: flex;
+    align-items:flex-start;
+    justify-content: center;
+
+}
+
+body div main .buscadorIndex {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+body div main div section h1 {
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    padding: 10px 5px;
+    margin: 5px;
+}
+
+body div main div section form {
+    height: 55vh;
+    width: 40vw;
+    border: #3C7566 solid 2px;
+    margin: 10px;
+    border-radius: 3%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    flex-direction: column;
+    background-color: #C25B3E;
+    opacity: 0.8;
+    color: black;
+}
+/* estilos para buscador del index*/
+body div main div section form .buscador {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 2px;
+    padding: 2px;
+    border: none;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    min-height: 20%;
+    justify-content: space-around;
+}
+
+body div main div section form .select {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main div section form div label {
+    padding: 5px;
+    margin: 5px;
+}
+/*estilo para selectores de index, inmuebles e inmobiliarias*/
+body div main div section form div .selectInput, body div main div section div label .selectInput, body div main div section form label .selectInput {
+    width: 150px;
+    height: 30px;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 8px;
+    font-family: 'Lato', sans-serif;
+    font-weight: lighter;
+    font-size: 15px;
+}
+
+/*tamano de letra para el boton en main*/
+main div section form div input, 
+body div main section a button,
+body div main section form .boton,
+body div main div section .boton {
+    font-size: 20px;
+}
+/* selectores principalmente de contacto*/
+body div .gridContenedorContacto {
+    display: grid;
+    grid-template-areas: 
+        "promocion contacto"
+        "promocion contacto"
+        "mapa contacto";
+    grid-template-columns: 0.6fr 1.5fr;
+    grid-template-rows: auto-fill;
+    column-gap: 5px;
+    margin: 20px;
+    margin-left: 50px; 
+    justify-items: center;
+    align-items: flex-start;
+}
+
+body div main .promocion {
+    grid-area: promocion;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 10px;
+    width: 83%;
+    height: 400px;
+    border: #3C7566 solid 2px;
+    border-radius: 3%;
+}
+
+body div main section img {
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    margin: 5px;
+}
+
+body div main section h2 {
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    padding: 10px 5px;
+    margin: 5px;
+    width: 250px;
+    height: 80px;
+    text-align: center;
+}
+body div main section h3 {
+    font-family: 'Lato', sans-serif;
+    font-weight: bolder;
+    font-size: 20px;
+    padding: 10px 5px;
+    margin: 5px;
+    text-align: center;
+}
+
+body div main .mapa {
+    grid-area: mapa;
+    border: #3C7566 solid 2px;
+    width: 83%;
+    height: 204px;
+}
+
+body div main .contacto {
+    grid-area: contacto;
+    width: 80%;
+    height: 100%;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+body div main section iframe {
+    width: 100%;
+    height: 200px;
+}
+
+body div main section form {
+    width: 100%;
+    height: 100vh;
+    margin: 2px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: #3C7566 solid 2px;
+    border-radius: 3%;
+}
+
+body div main section form label .input {
+    width: 80%;
+    height: 30px;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #3C7566;
+} 
+
+body div main section form label .input:focus {
+    background-color: white;
+    transition: background-color 2s linear 1s;
+}
+
+body div main section form label .textarea {
+    resize: none;
+    height: 18vh;
+}
+/*alineacion de boton en contacto e inmuebles*/
+body div main section form .boton, body div main div section div .boton {
+    align-self: flex-end;
+    margin-bottom: 10px;
+    justify-self: start;
+}
+
+/*selectores de pagina inmuebles*/
+body div main .gridContenedorInmuebles {
+    display: grid;
+    grid-template-areas: 
+    "buscadorCompleto selector"
+    "buscadorCompleto resultadoUno"
+    "buscadorCompleto resultadoDos"
+    "buscadorCompleto resultadoTres";
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto;
+    column-gap: 5px;
+    margin: 20px;
+    margin-left: 50px; 
+    justify-items: center;
+    align-items: flex-start;
+}
+
+body div main div .buscadorCompleto {
+    grid-area: buscadorCompleto;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+body div main div section .formulario {
+    width: 100%;
+    height: 100%;
+}
+
+body div main div section form .inmuebles {
+    min-height: 15%;
+}
+
+body div main div section form div {
+    margin-left: 20px;
+}
+
+body div main div section form .checkbox {
+    align-self:flex-start;
+}
+
+body div main div section form div p, body div main div section div div p {
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 5px;
+    padding: 10px;
+}
+
+body div main div section form div p label input {
+    margin-right: 10px;
+}
+
+body div main div section form .boton {
+    margin-bottom: 10px;
+}
+
+body div main div section .selector {
+    grid-area: selector;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+body div main div section .resultadoUno, body div main div section .resultadoDos, body div main div section .resultadoTres {
+    display: flex;
+    border: #3C7566 solid 2px;
+    border-radius: 3%;
+    margin: 20px;
+    box-shadow: 4px 9px 24px 4px rgba(60,117,102,0.73);
+    -webkit-box-shadow: 4px 9px 24px 4px rgba(60,117,102,0.73);
+    -moz-box-shadow: 4px 9px 24px 4px rgba(60,117,102,0.73);
+}
+
+body div main div section .resultadoUno {
+    grid-area: resultadoUno;
+}
+
+body div main div section .resultadoDos {
+    grid-area: resultadoDos;
+}
+
+body div main div section .resultadoTres {
+    grid-area: resultadoTres;
+}
+
+body div main div section div img {
+    width: 400px;
+    height: 300px;
+}
+
+body div main div section div .txtInput {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+/*selectores de pagina inmobiliarias*/
+body div main .gridContenedorInmobiliarias {
+    display: grid;
+    grid-template-areas: 
+    "buscadorInmobiliarias selectorUno"
+    "buscadorInmobiliarias inmobiliariaUno"
+    "buscadorInmobiliarias inmobiliariaDos"
+    "buscadorInmobiliarias inmobiliariaTres";
+    grid-template-columns: 0.6fr 2fr;
+    grid-template-rows: auto;
+    column-gap: 5px;
+    margin: 20px;
+    margin-left: 50px; 
+    justify-items: center;
+    align-items: flex-start;
+}
+
+body div main div .buscadorInmobiliarias {
+    grid-area: buscadorInmobiliarias;
+    width: 20vw;
+    height: 20vh;
+}
+
+body div main div section .buscadorInmobiliarias {
+    width: 20vw;
+    height: 20vh;
+}
+
+body div main div section form .boton{
+    align-self: center;
+}
+
+body div main div section div .logo {
+    width: 250px;
+    height: 250px;
+}
+
+body div main div section .selectorUno {
+    grid-area: selectorUno;
+    display: flex;
+    justify-content: flex-end;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+body div main div section .inmobiliariaUno {
+    grid-area: inmobiliariaUno;
+    display: flex;
+}
+body div main div section .inmobiliariaDos {
+    grid-area: inmobiliariaDos;
+    display: flex;
+}
+body div main div section .inmobiliariaTres {
+    grid-area: inmobiliariaTres;
+    display: flex;
+}
+
+/*selectores de la pagina de ingreso*/
+body div main .ingreso {
+    border: #3C7566 solid 2px;
+    margin: 10px;
+    border-radius: 3%;
+    padding: 10px;
+    display: flex;
+    background-color: #C25B3E;
+    opacity: 0.8;
+    color: black;
+    height: 70vh;
+}
+
+body div main div .ingresoNuevo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+body div main div section .formularioIngreso {
+    height: 100%;
+    width: 100%;
+    border: none;
+}
+
+body div main div section form .datos {
+    display: flex;
+    flex-direction: column;
+}
+
+body div main div section form div label {
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+body div main div section .boton {
+    text-decoration: none;
+}
+
+body div main div section .registrarse {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    width: 80%;
+}
+
+body div main div section form a {
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    color: #000;
+}
+/* FOOTER*/
+
+footer {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+footer div div a img {
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+}
+
+footer div div img {
+    width: 25px;
+    height: 25px;
+    padding: 5px;
+}
+
+footer .redes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 50px;
+    width: 30vw;
+    background-color: white;
+    border: gray 2px solid;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+footer div h3 {
+    font-family: 'Lato', sans-serif;
+    font-weight: lighter;
+    font-size: 18px;
+    padding: 2px;
+}
+
+footer div .copyright {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+footer div .contactosRedes {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+/*mediaqueries*/
+/*tamaño netbook*/
+@media screen and (max-width:1110px) {
+    /*cambios en index*/
+    body div main div section form .buscador {
+        flex-direction: column;
+        justify-content: space-between;
+        height: 5%;
+    }
+
+    body div main div section form {
+        height: 60vh;
+    }
+
+    body div main div section form .monto {
+        flex-direction: row;
+    }
+
+    body div main div section form div div .minMax {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 5%;
+    } 
+
+    /*cambios en contacto*/
+    body div main section form label {
+        height: 15vh;
+        padding-left: 10px;
+    }
+
+    body div main section form label .textarea {
+        height: 15vh;
+    }
+
+    body div main section form .boton {
+        padding: 5px;
+        margin-right: 0px;
+    }
+
+    body div main .mapa {
+        height: 354px;
+    }
+
+    body div main section iframe {
+        height: 350px;
+    }
+
+    body div main .promocion {
+        height: 500px;
+    }
+}
+/* tamaño especial en el que el footer se ve mal y hay que agrandar el form del index y ajustar formulario de contacto*/
+@media screen and (max-width:990px){
+    /*cambios header*/
+    header {
+        flex-direction: row-reverse;
+    }
+
+    header div {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    header nav ul {
+        align-items: flex-start;
+    }
+
+    header nav ul li .boton {
+        margin-top: 50px;
+        margin-left: 10px;
+        padding: 5px;
+    }
+    footer .redes {
+        width: 50vw;
+    }
+    body div main div section form {
+        width: 60vw;
+    }
+    /*cambios en página de contacto*/
+    body div main section form label {
+        height: 10vh;
+    }
+
+    body div main section form {
+        height: 95%;
+    }
+}
+/*tamaño para acomodar formulario de contacto*/
+@media screen and (max-width:880px){
+    body div main section form {
+        height: 100%;
+    }
+
+    body div main section form .boton {
+        align-self: center;
+    }
+}
+
+/*tamaño tablet posicion vertical*/
+@media screen and (max-width:660px) {
+/*cambios en index*/
+    body div main div section form {
+        height: 60vh;
+    }
+    /*cambios en contacto*/
+    body div .gridContenedorContacto {
+        grid-template-columns: 0.4fr 1.3fr;
+    }
+    body div main section form {
+        height: 90vh;
+        padding: 0;
+        margin: 0;
+        margin-top: 10px;
+    }
+
+    body div main section form label .textarea {
+        height: 10vh;
+    }
+
+    body div main .promocion {
+        height: 400px;
+    }
+    
+    body div main .mapa {
+        height: 304px;
+    }
+
+    body div main section iframe {
+        height: 300px;
+    }
+}
+/*mobile 630px*/
+@media screen and (max-width:630px) {
+    body div .gridContenedorContacto {
+        grid-template-areas: 
+        "promocion"
+        "contacto"
+        "mapa";
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1.5fr 0.5fr;
+    }
+
+    body div main .mapa {
+        height: 254px;
+        margin-top: 20px;
+    }
+
+    body div main section iframe {
+        height: 250px;
+    }
+}
+/*mobile 540px*/
+@media screen and (max-width:540px) {
+    /*cambios en index*/
+    body div main div section form {
+        width: 80vw;
+    }
+    body div main div section h1 {
+        font-size: 30px;
+    }
+    footer .redes {
+        width: 80vw;
+    }
+}
+/*tamaño mobile 400px*/
+@media screen and (max-width:400px) {
+    /*cambios en header*/
+    header div a img {
+        width: 40px;
+        height: 40px;
+}
+    /*cambios en index*/
+    body div main div section h1 {
+        font-size: 20px;
+    }
+
+    body div main div section form {
+        height: 45vh;
+    }
+
+    body div main div section form .buscador {
+        flex-direction: row;
+        font-size: 15px;
+        height: 5%;
+        align-items: center;
+        width: 100%;
+        justify-content: center;
+    }
+
+    body div main div section form .buscador label {
+        height: 50%;
+        width: 100%;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 10px;
+        justify-content: center;
+    }
+
+    body div main div section form div .provincia {
+        height: 100%;
+        width: 70%;
+        font-size: 12px;
+        padding: 0;
+    }
+    body div main div section form .select {
+        flex-direction: column;
+        height: 100%;
+        padding: 0px;
+    }
+
+    body div main div section form div .selectInput {
+        width: 80%;
+        height: 100%;
+    }
+
+    body div main div section form div .divMonto {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    body div main div section form div div .selectInput {
+        align-self: center;
+    }
+
+    body div main div section form div div .minMax {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+/*tamaño mobile (acomodar footer para tamaños mas pequeños) 370px*/
+@media screen and (max-width:370px) {
+    footer .redes {
+        justify-content: center;
+        width: 60vw;
+    }
+}
