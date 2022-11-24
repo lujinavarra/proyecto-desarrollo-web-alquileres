@@ -8,8 +8,6 @@
 /* selectores para todo el sitio*/
 body .body {
     background-color: #C29689;
-    /* background: rgb(223,26,236);
-    background: linear-gradient(90deg, rgba(223,26,236,0.9836309523809523) 0%, rgba(194,150,137,1) 100%); */
     min-height: 100vh;
 }
 
@@ -31,16 +29,15 @@ header nav ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* flex-wrap: wrap; */
     background-color: #C29689;
     padding: 0;
     margin: 0;
 }
 
-
 header nav ul li {
     list-style-type: none;
 }
+
 header nav ul li a {
     text-decoration: none;
     color: black;
@@ -84,7 +81,6 @@ body div .main {
     display: flex;
     align-items:flex-start;
     justify-content: center;
-
 }
 
 body div main .buscadorIndex {
@@ -116,7 +112,7 @@ body div main div section form {
     opacity: 0.8;
     color: black;
 }
-/* estilos para buscador del index*/
+
 body div main div section form .buscador {
     display: flex;
     flex-direction: row;
@@ -207,6 +203,7 @@ body div main section h2 {
     height: 80px;
     text-align: center;
 }
+
 body div main section h3 {
     font-family: 'Lato', sans-serif;
     font-weight: bolder;
@@ -650,7 +647,6 @@ footer div .contactosRedes {
 /*cambios en index*/
     body div main div section form {
         height: 60vh;
-        /* width: 80vw; */
     }
     /*cambios en contacto*/
     body div .gridContenedorContacto {
