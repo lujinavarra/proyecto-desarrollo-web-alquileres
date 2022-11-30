@@ -45,7 +45,7 @@
                 <section class="buscadorCompleto">
                     <!--buscador con mayor cantidad de opciones-->
                     <form action="" method="" class="formulario">
-                        <div class="buscador inmuebles">
+                        <div class="radioInmuebles">
                             <label for="alquilar">
                                 <input type="radio" value="alquilar" name="alquilar-comprar" checked> Alquilar
                             </label>
@@ -53,7 +53,7 @@
                                 <input type="radio" value="comprar" name="alquilar-comprar"> Comprar
                             </label><br>
                         </div>
-                        <div class="buscador select inmuebles">
+                        <div class="selectInmuebles">
                             <label for="Provincia">Seleccione una provincia</label>
                             <select name="Provincia" class="selectInput">
                                 <option value="Buenos Aires">Buenos Aires</option>
@@ -83,7 +83,7 @@
                             </select>
                             <br />
                         </div>
-                        <div class="buscador monto inmuebles">
+                        <div class="montoInmuebles">
                             <div>
                                 <label for="minimo">Monto Mínimo</label>
                                 <input type="number" name="minimo" placeholder="$" class="selectInput">
@@ -93,7 +93,7 @@
                                 <input type="number" name="maximo" placeholder="$" class="selectInput"><br />
                             </div>
                         </div>
-                        <div class="buscador select inmuebles">
+                        <div class="selectInmuebles">
                             <label for="propiedad">Tipo de propiedad</label>
                             <select name="propiedad" class="selectInput">
                                 <option value="casa">Casa</option>
@@ -113,27 +113,26 @@
                         <div class="checkbox">
                             <p>Ambientes <br>
                                 <label for="ambientes"><input type="checkbox" value="1" name="ambientes" checked>1</label>
-                                <br>
-                                <label for="ambientes"><input type="checkbox" value="2" name="ambientes">2</label><br>
-                                <label for="ambientes"><input type="checkbox" value="3" name="ambientes">3</label><br>
+                                <label for="ambientes"><input type="checkbox" value="2" name="ambientes">2</label>
+                                <label for="ambientes"><input type="checkbox" value="3" name="ambientes">3</label>
                                 <label for="ambientes"><input type="checkbox" value="mas-de-3"
-                                        name="ambientes">4 o más</label><br>
+                                        name="ambientes">4 o más</label>
                             </p>
                         </div>
-                        <input type="submit" value="Buscar" class="boton" />
+                        <input type="submit" value="Buscar" class="botonBuscador" />
                     </form>
                 </section>
                 <section>
                     <!--panel donde se muestran los resultados-->
                     <div class="selector">
                         <!--select para mostrar resultados-->
-                        <label for="clasificacion">Ordenar por:<select name="clasificacion" class="selectInput">
+                        <label for="clasificacion">Ordenar por:<select name="clasificacion" class="selectSelector">
                                 <option value="destacados">Destacados</option>
                                 <option value="menor-precio">Menor Precio</option>
                                 <option value="mayor-precio">Mayor Precio</option>
                                 <option value="fecha-de-publicacion">Fecha de Publicacion</option>
                             </select></label>
-                        <label for="mostrar">Mostrar:<select name="mostrar" class="selectInput">
+                        <label for="mostrar">Mostrar:<select name="mostrar" class="selectSelector">
                                 <option value="tres">3</option>
                                 <option value="cinco">5</option>
                                 <option value="diez">10</option>
@@ -151,7 +150,7 @@
                                 similique
                                 et omnis sequi repellendus tenetur.
                             </p>
-                            <input type="button" value="Ver" class="boton">
+                            <input type="button" value="Ver" class="botonResultado">
                         </div>
                     </div>
                     <div class="resultadoDos">
@@ -164,7 +163,7 @@
                                 similique
                                 et omnis sequi repellendus tenetur.
                             </p>
-                            <input type="button" value="Ver" class="boton">
+                            <input type="button" value="Ver" class="botonResultado">
                         </div>
                     </div>
                     <div class="resultadoTres">
@@ -177,7 +176,7 @@
                                 similique
                                 et omnis sequi repellendus tenetur.
                             </p>
-                            <input type="button" value="Ver" class="boton">
+                            <input type="button" value="Ver" class="botonResultado">
                         </div>
                     </div>
                 </section>
@@ -185,7 +184,7 @@
         </main>
         <div class="linea"></div>
         <!--linea horizontal-->
-        <footer id="pie">
+        <footer id="pie" class="pie">
             <div class="redes">
                 <div class="copyright">
                     <!--logo de copyright y redes sociales-->
