@@ -86,9 +86,7 @@ header {
     padding: 10px;
     padding-top: 20px;
     background-color: #C25B3E;
-    opacity: 0.8;
-    padding-bottom: 0;
-    margin-bottom: 0; }
+    opacity: 0.8; }
     .buscadorIndex section .gridContenedorFormulario .buscador {
       grid-area: buscador;
       display: flex;
@@ -408,7 +406,7 @@ header {
   .gridContenedorInmobiliarias section .buscadorInmobiliarias {
     grid-area: buscadorInmobiliarias;
     width: 20vw;
-    height: 20vh;
+    height: 30vh;
     border: #3C7566 solid 2px;
     margin: 10px;
     border-radius: 3%;
@@ -653,19 +651,21 @@ header {
     background-color: #C25B3E;
     opacity: 0.8;
     color: black;
-    height: 70vh;
+    height: 90vh;
     width: 40vw; }
     .mainIngreso .ingreso .ingresoNuevo {
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: flex-end;
       flex-direction: column;
       height: 100%; }
       .mainIngreso .ingreso .ingresoNuevo h2 {
         font-size: 25px;
         padding: 5px;
+        padding-top: 20px;
+        margin-top: 20px;
         margin: 5px;
-        width: 250px;
+        width: 100%;
         height: 70px;
         text-align: center;
         font-weight: bold; }
@@ -720,8 +720,10 @@ header {
       .mainIngreso .ingreso section h2 {
         font-size: 25px;
         padding: 5px;
+        padding-top: 20px;
+        margin-top: 20px;
         margin: 5px;
-        width: 250px;
+        width: 100%;
         height: 70px;
         text-align: center;
         font-weight: bold; }
@@ -841,8 +843,6 @@ header {
     height: 200px; }
   .gridContenedorInmobiliarias section .buscadorInmobiliarias label .selectInput {
     width: 100px; }
-  .gridContenedorInmobiliarias section .buscadorInmobiliarias {
-    height: 15vh; }
   .pie .redes {
     width: 50vw; } }
 
@@ -880,8 +880,7 @@ header {
     width: 150px; }
   /*cambios en ingreso*/
   .mainIngreso .ingreso section h2, .mainIngreso .ingreso .ingresoNuevo h2 {
-    font-size: 20px;
-    width: 200px; } }
+    font-size: 20px; } }
 
 /*mobile 630px*/
 @media screen and (max-width: 630px) {
@@ -914,8 +913,7 @@ header {
   .mainIngreso .ingreso .ingresoNuevo .formularioIngreso .datos .selectInput {
     width: 100px; }
   .mainIngreso .ingreso section h2, .mainIngreso .ingreso .ingresoNuevo h2 {
-    font-size: 15px;
-    width: 150px; }
+    font-size: 15px; }
   footer .redes {
     width: 80vw; } }
 

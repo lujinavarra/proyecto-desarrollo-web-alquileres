@@ -40,8 +40,6 @@
             padding-top: 20px;
             background-color: nth($colores, 3);
             opacity: 0.8;
-            padding-bottom: 0;
-            margin-bottom: 0;
             .buscador {
                 grid-area: buscador;
                 @include flex(flex, space-around, center);

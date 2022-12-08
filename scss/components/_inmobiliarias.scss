@@ -19,7 +19,7 @@
         .buscadorInmobiliarias {
             grid-area: buscadorInmobiliarias;
             width: 20vw;
-            height: 20vh;
+            height: 30vh;
             border: nth($colores, 2) solid 2px;
             margin: map-get($boton, margen);
             border-radius: 3%;

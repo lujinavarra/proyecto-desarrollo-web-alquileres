@@ -73,6 +73,7 @@
         align-self: center;
     }
     /*cambios en inmobiliarias*/
+
     .inmobiliariaUno, .inmobiliariaDos, .inmobiliariaTres {
         flex-direction: column;
         align-items: center;
@@ -91,10 +92,6 @@
 
     .gridContenedorInmobiliarias section .buscadorInmobiliarias label .selectInput {
         width: 100px;
-    }
-
-    .gridContenedorInmobiliarias section .buscadorInmobiliarias {
-        height: 15vh;
     }
 
     .pie .redes {
@@ -160,7 +157,6 @@
     /*cambios en ingreso*/
     .mainIngreso .ingreso section h2, .mainIngreso .ingreso .ingresoNuevo h2 {
         font-size: nth($tamano-letra, 1);
-        width: 200px;
     }
 }
 
@@ -214,7 +210,6 @@
 
     .mainIngreso .ingreso section h2, .mainIngreso .ingreso .ingresoNuevo h2 {
         font-size: nth($tamano-letra, 5);
-        width: 150px;
     }
     footer .redes {
         width: 80vw;
