@@ -1,0 +1,126 @@
+@import "../base/variables";
+
+/* MAIN*/
+
+.main {
+    min-height: 75vh;
+}
+/* selectores del index*/
+
+.buscadorIndex {
+    @include flex (flex, flex-start, center);
+    flex-direction: column;
+    section {
+        h1{
+            font-family: $fuente-principal;
+            font-weight: bold;
+            font-size: nth($tamano-letra, 3);
+            padding: 10px 5px;
+            margin: 5px;
+            &::first-letter {
+                font-family: $fuente-secundaria;
+            }
+        }
+    }
+    section {
+        .gridContenedorFormulario{
+            display: grid;
+            grid-template-areas: 
+            "buscador buscador"
+            "select select"
+            "monto monto"
+            "input input";
+            grid-template-columns: auto;
+            grid-template-rows: 0.6fr 1.5fr 1.5fr 0.6fr;
+            grid-row-gap: 5px;
+            border: nth($colores, 2) solid 2px;
+            margin: map-get($boton, margen);
+            border-radius: 3%;
+            padding: map-get($boton, relleno);
+            padding-top: 20px;
+            background-color: nth($colores, 3);
+            opacity: 0.8;
+            padding-bottom: 0;
+            margin-bottom: 0;
+            .buscador {
+                grid-area: buscador;
+                @include flex(flex, space-around, center);
+                flex-direction: row;
+                margin: 5px;
+                margin-top: map-get($boton, margen);
+                padding: 5px;
+                padding-top: map-get($boton, relleno);
+                border: none;
+                font-family: $fuente-principal;
+                font-weight: bold;
+                font-size: nth($tamano-letra, 1);
+                min-height: 20%;
+            }
+            .select {
+                grid-area: select;
+                @include flex(flex, flex-start, center);
+                flex-direction: column;
+                margin: 5px;
+                padding: 5px;
+                border: none;
+                font-family: $fuente-principal;
+                font-weight: bold;
+                font-size: nth($tamano-letra, 1);
+                min-height: 20%;
+                .provincia {
+                    margin: 5px;
+                    padding: 5px;
+                    text-align: center;
+                }
+                .selectInput {
+                    width: 30%;
+                    height: 40px;
+                    padding: 5px;
+                    margin: 5px;
+                    border-radius: 8px;
+                    font-family: $fuente-principal;
+                    font-weight: lighter;
+                    font-size: nth($tamano-letra, 1);
+                }
+            }
+            .monto {
+                grid-area: monto;
+                @include flex(flex, center, flex-start);
+                justify-self: center;
+                margin: 2px;
+                margin-left: 50px;
+                padding: 2px;
+                border: none;
+                font-family: $fuente-principal;
+                font-weight: bold;
+                font-size: nth($tamano-letra, 1);
+                min-height: 20%;
+                .divMonto {
+                    .selectInput {
+                        width: 60%;
+                        height: 30px;
+                        padding: 5px;
+                        margin: 5px;
+                        border-radius: 8px;
+                    }
+                }
+            }
+            .input {
+                grid-area: input;
+                @include flex(flex, center, center);
+                .botonIndex {
+                    color: nth($colores, 4);
+                    background-color: nth($colores, 5);
+                    padding: map-get($boton, relleno);
+                    border-radius: map-get($boton, redondeado);
+                    font-size: nth($tamano-letra, 1);
+                    margin: map-get($boton, margen);
+                    &:hover {
+                        background-color: nth($colores, 3);
+                        transition: 2s
+                    }
+                }
+            }
+        }
+    }
+}

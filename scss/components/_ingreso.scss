@@ -1,0 +1,111 @@
+@import "../base/variables";
+
+/*selectores de la pagina de ingreso*/
+
+.mainIngreso {
+    @include flex (flex, center, center);
+    .ingreso {
+        border: nth($colores, 2) solid 2px;
+        margin: 5px;
+        border-radius: 3%;
+        padding: 5px;
+        @include flex (flex, center, center);
+        background-color: nth($colores, 3);
+        opacity: 0.8;
+        color: nth($colores, 5);
+        height: 70vh;
+        width: 40vw;
+        .ingresoNuevo {
+            @include flex (flex, center, center);
+            flex-direction: column;
+            height: 100%;
+            h2 {
+                font-size: nth($tamano-letra, 4);
+                padding: 5px;
+                margin: 5px;
+                width: 250px;
+                height: 70px;
+                text-align: center;
+                font-weight: bold;
+            }
+            .formularioIngreso {
+                height: 100%;
+                width: 100%;
+                border: none;
+                display: flex;
+                flex-direction: column;
+                .datos {
+                    @include flex (flex, center, center);
+                    flex-direction: column;
+                    max-height: 30%;
+                    label {
+                        padding: 5px;
+                        margin: 5px;
+                        font-family: $fuente-principal;
+                        font-weight: bold;
+                        font-size: nth($tamano-letra, 1);
+                    }
+                    .selectInput {
+                        width: 150px;
+                        height: 30px;
+                        padding: 5px;
+                        margin: 5px;
+                        border-radius: 8px;
+                        font-family: $fuente-principal;
+                        font-weight: lighter;
+                        font-size: nth($tamano-letra, 5);
+                    }
+                }
+                .botonIngreso {
+                    text-decoration: none;
+                    color: nth($colores, 4);
+                    background-color: nth($colores, 5);
+                    padding: map-get($boton, relleno);
+                    border-radius: map-get($boton, redondeado);
+                    align-self: center;
+                    justify-self: center;
+                    margin-bottom: 20px;
+                }
+                a {
+                    text-decoration: none;
+                    font-family: $fuente-principal;
+                    font-weight: bold;
+                    font-size: nth($tamano-letra, 5);
+                    color: nth($colores, 5);
+                    padding: map-get($boton, relleno);
+                    margin: map-get($boton, margen);
+                    align-self: flex-end;
+                    text-align: center;
+                }
+            }
+        }
+        section {
+            height: 100%;
+            h2 {
+                font-size: nth($tamano-letra, 4);
+                padding: 5px;
+                margin: 5px;
+                width: 250px;
+                height: 70px;
+                text-align: center;
+                font-weight: bold;
+            }
+            .registrarse {
+                @include flex (flex, center, center);
+                flex-direction: column;
+                height: 80%;
+                width: 80%;
+                .botonIngreso {
+                    text-decoration: none;
+                    color: nth($colores, 4);
+                    background-color: nth($colores, 5);
+                    padding: map-get($boton, relleno);
+                    border-radius: map-get($boton, redondeado);
+                    align-self: center;
+                    justify-self: center;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}  

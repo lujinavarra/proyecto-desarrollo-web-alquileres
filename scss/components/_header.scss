@@ -1,0 +1,53 @@
+@import "../base/variables";
+/*HEADER*/
+header {
+    @include flex (flex, space-between, center);
+    div {
+        a {
+            img {
+                width: 80px;
+                height: 80px;
+                margin: 5px;
+            }
+        }
+    }
+    nav {
+        div {
+            div {
+                ul {
+                    @include flex (flex, space-between, center);
+                    background-color: nth($colores, 1);
+                    padding: 0;
+                    margin: 0;
+                    li {
+                        list-style-type: none;
+                        a {
+                            text-decoration: none;
+                            color: nth($colores, 5);
+                            font-family: $fuente-principal;
+                            font-weight: bold;
+                            font-size: nth($tamano-letra, 1);
+                            padding: 5px;
+                            margin: 5px;
+                            &:visited {
+                                color: nth($colores, 3);
+                            }
+                        }
+                        .boton {
+                            color: nth($colores, 4);
+                            background-color: nth($colores, 5);
+                            padding: map-get($boton, relleno);
+                            border-radius: map-get($boton, redondeado);
+                            margin-right: map-get($boton, margen);
+                            &:hover {
+                                color: nth($colores, 5);
+                                background-color: nth($colores, 4);
+                                transition: 2s;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

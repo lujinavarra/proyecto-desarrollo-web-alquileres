@@ -1,0 +1,342 @@
+@import "./variables";
+
+
+/*mediaqueries*/
+/*tamaño netbook*/
+@media screen and (max-width:1120px) {
+    /*cambios en contacto*/
+    .gridContenedorContacto .contacto form .botonContacto {
+        margin: 20px;
+    }
+
+    .gridContenedorContacto .mapa {
+        height: 354px;
+    } 
+
+    .gridContenedorContacto .mapa iframe {
+        height: 350px;
+    }
+/*cambios en inmuebles*/
+    .resultadoUno .txtInput, .resultadoDos .txtInput, .resultadoTres .txtInput {
+        font-size: nth($tamano-letra, 5);
+    }
+
+    .gridContenedorInmuebles {
+        grid-template-columns: 0.6fr 2fr;
+        margin-left: 20px;
+    }
+    /*cambios en inmobiliarias*/
+    .gridContenedorInmobiliarias section .inmobiliariaUno div p, .gridContenedorInmobiliarias section .inmobiliariaDos div p, .gridContenedorInmobiliarias section .inmobiliariaTres div p {
+        font-size: nth($tamano-letra, 5);
+    }
+    
+    /*cambios en ingreso*/
+    .mainIngreso .ingreso {
+        width: 70vw;
+    }
+} 
+/* tamaño especial en el que el footer se ve mal y hay que acomodar el header*/
+@media screen and (max-width:990px){
+    /*cambios header*/
+    header {
+        flex-direction: row-reverse;
+    }
+
+    header div {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    header nav ul {
+        align-items: flex-start;
+    } 
+
+    header nav ul li .boton {
+        margin-top: 50px;
+        margin-left: 10px;
+        padding: 5px;
+    }
+    /*cambios en inmuebles*/
+    .gridContenedorInmuebles {
+        grid-template-columns: 0.4fr 1fr;
+        margin: map-get($boton, margen);
+    }
+
+    .gridContenedorInmuebles .buscadorCompleto .formulario .radioInmuebles, .gridContenedorInmuebles .buscadorCompleto .formulario .montoInmuebles, .resultadoUno, .resultadoDos, .resultadoTres {
+        flex-direction: column;
+    }
+
+    .resultadoUno img, .resultadoDos img, .resultadoTres img {
+        width: 200px;
+        height: 150px;
+        align-self: center;
+    }
+    /*cambios en inmobiliarias*/
+    .inmobiliariaUno, .inmobiliariaDos, .inmobiliariaTres {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gridContenedorInmobiliarias section .inmobiliariaUno div .botonInmobiliarias,
+    .gridContenedorInmobiliarias section .inmobiliariaDos div .botonInmobiliarias,
+    .gridContenedorInmobiliarias section .inmobiliariaTres div .botonInmobiliarias {
+        margin-bottom: map-get($boton, margen);
+    }
+
+    .inmobiliariaUno .logo, .inmobiliariaDos .logo, .inmobiliariaTres .logo {
+        width: 200px;
+        height: 200px;
+    }
+
+    .gridContenedorInmobiliarias section .buscadorInmobiliarias label .selectInput {
+        width: 100px;
+    }
+
+    .gridContenedorInmobiliarias section .buscadorInmobiliarias {
+        height: 15vh;
+    }
+
+    .pie .redes {
+        width: 50vw;
+    } 
+}
+
+/*tamaño tablet posicion vertical*/
+@media screen and (max-width:760px) { 
+    /*cambios en contacto*/
+    .gridContenedorContacto {
+        grid-template-columns: 0.4fr 1.3fr;
+    }
+
+    /*cambios en inmuebles*/
+    .gridContenedorInmuebles {
+        grid-template-areas: 
+        "buscadorCompleto"
+        "selector"
+        "resultadoUno"
+        "resultadoDos"
+        "resultadoTres";
+        grid-template-columns: 1.5fr;
+        grid-template-rows: auto-fill;
+    }
+
+    .gridContenedorInmuebles .buscadorCompleto .formulario .radioInmuebles, .gridContenedorInmuebles .buscadorCompleto .formulario .montoInmuebles, .gridContenedorInmuebles .buscadorCompleto .formulario .checkbox {
+        @include flex (flex, center, center);
+        flex-direction: row;
+        max-width: 50%;
+        align-self: center;
+    }
+
+    .formulario .botonBuscador {
+        align-self: flex-end;
+        justify-self: flex-start;
+        margin-bottom: 20px;
+    }
+
+    .formulario .selectInmuebles {
+        height: 10%;
+    }
+
+/*cambios en inmobiliarias*/
+    .gridContenedorInmobiliarias {
+        grid-template-areas: 
+        "buscadorInmobiliarias"
+        "selectorUno"
+        "inmobiliariaUno"
+        "inmobiliariaDos"
+        "inmobiiariaTres";
+        grid-template-columns: 1.5fr;
+        grid-template-rows: auto-fill;
+    }
+
+    .gridContenedorInmobiliarias section .buscadorInmobiliarias {
+        width: 40vw;
+    }
+
+    .gridContenedorInmobiliarias section .buscadorInmobiliarias label .selectInput {
+        width: 150px;
+    }
+    /*cambios en ingreso*/
+    .mainIngreso .ingreso section h2, .mainIngreso .ingreso .ingresoNuevo h2 {
+        font-size: nth($tamano-letra, 1);
+        width: 200px;
+    }
+}
+
+/*mobile 630px*/
+@media screen and (max-width:630px) { 
+    /*pagina de contacto*/
+    .gridContenedorContacto {
+        grid-template-areas: 
+        "promocion"
+        "contacto"
+        "mapa";
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1.5fr 0.5fr;
+    }
+
+    .gridContenedorContacto .mapa {
+        height: 254px;
+        margin-top: 20px;
+        width: 80%;
+    }
+
+    .gridContenedorContacto .mapa iframe {
+        height: 250px;
+    }
+
+    .gridContenedorContacto .promocion {
+        width: 80%;
+    }
+}
+
+/*mobile 540px*/
+@media screen and (max-width:540px) {
+    /*cambios en index*/
+    .buscadorIndex section h1 {
+        font-size: nth($tamano-letra, 6);
+    }
+    .gridContenedorFormulario .monto {
+        margin-top: map-get($boton, margen);
+    } 
+    .gridContenedorFormulario .select .selectInput {
+        width: 40%;
+    }
+    /*cambios en ingreso*/
+    .mainIngreso .ingreso {
+        width: 80vw;
+    }
+
+    .mainIngreso .ingreso .ingresoNuevo .formularioIngreso .datos .selectInput {
+        width: 100px;
+    }
+
+    .mainIngreso .ingreso section h2, .mainIngreso .ingreso .ingresoNuevo h2 {
+        font-size: nth($tamano-letra, 5);
+        width: 150px;
+    }
+    footer .redes {
+        width: 80vw;
+    }
+}
+/*tamaño mobile 400px*/
+@media screen and (max-width:400px) {
+    /*cambios en header*/
+    header div a img {
+        width: 40px;
+        height: 40px;
+}
+    /*cambios en index*/
+    .buscadorIndex section h1 {
+        font-size: nth($tamano-letra, 4);
+    }
+
+    .gridContenedorFormulario .monto {
+        margin-left: 20px;
+    }
+
+    .gridContenedorFormulario .select .selectInput {
+        width: 50%;
+        height: 35px;
+    }
+    /*cambios en inmuebles*/
+    .gridContenedorInmuebles {
+        margin-left: 0;
+    }
+
+    .gridContenedorInmuebles .buscadorCompleto .formulario {
+        width: 80%;
+        margin: 5px;
+        padding: 5px;
+    }
+
+    .gridContenedorInmuebles .buscadorCompleto .formulario .montoInmuebles, .gridContenedorInmuebles .buscadorCompleto .formulario .radioInmuebles, .gridContenedorInmuebles .buscadorCompleto .formulario .selectInmuebles, .gridContenedorInmuebles .buscadorCompleto .formulario .checkbox {
+        font-size: nth($tamano-letra, 5);
+        margin: 5px;
+        padding: 5px;
+    }
+
+    .gridContenedorInmuebles .buscadorCompleto .formulario .radioInmuebles {
+        justify-content: space-evenly;
+    }
+
+    .formulario .radioInmuebles label {
+        width: 80%;
+    }
+
+    .gridContenedorInmuebles .buscadorCompleto .formulario .montoInmuebles {
+        flex-direction: column;
+        @include flex (flex, center, center);
+    }
+    .formulario .montoInmuebles div, .formulario .selectInmuebles {
+        margin: 5px;
+        padding: 5px;
+    }
+
+    /*cambios en inmobiliarias*/
+    .gridContenedorInmobiliarias section .buscadorInmobiliarias label .selectInput {
+        width: 100px;
+    }
+
+    .gridContenedorInmobiliarias .buscadorInmobiliarias {
+        width: 70vw;
+    }
+    /*cambios en ingreso*/
+    .mainIngreso .ingreso {
+        width: 90vw;
+    }
+}
+
+
+/*tamaño mobile (acomodar para tamaños mas pequeños) 370px*/
+@media screen and (max-width:370px) {
+    /*cambios de index*/
+    .gridContenedorFormulario .buscador, .gridContenedorFormulario .select, .gridContenedorFormulario .select .selectInput, .gridContenedorFormulario .monto {
+        font-size: nth($tamano-letra, 5);
+    }
+    /*cambios en contacto*/
+    .gridContenedorContacto {
+        margin-left: 20px;
+    }
+    /*cambios en inmuebles*/
+    .gridContenedorInmuebles {
+        margin-left: 0;
+    }
+    .gridContenedorInmuebles .selector .selectSelector {
+        width: 100px;
+        padding: 2px;
+        margin: 2px;
+        font-size: nth($tamano-letra, 7);
+    }
+    .gridContenedorInmuebles .buscadorCompleto .formulario {
+        width: 70%;
+        margin: 2px;
+        padding: 2px;
+    }
+    
+    .selector label {
+        font-size: nth($tamano-letra, 7);
+    }
+    .gridContenedorInmuebles .buscadorCompleto .formulario .botonBuscador {
+        margin-bottom: 30px;
+    }
+
+    .gridContenedorInmuebles .txtInput .botonResultado {
+        align-self: center;
+        margin: 5px;
+    }
+    /*cambios en inmobiliarias*/
+    .gridContenedorInmobiliarias {
+        margin-left: map-get($boton, margen);
+    }
+
+    .gridContenedorInmobiliarias section .buscadorInmobiliarias {
+        width: 60vw;
+    }
+    /*cambios en footer*/
+    footer .redes {
+        justify-content: center;
+        width: 60vw;
+    }
+}

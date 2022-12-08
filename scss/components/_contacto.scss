@@ -1,0 +1,121 @@
+@import "../base/variables";
+
+/* selectores principalmente de contacto*/
+.gridContenedorContacto {
+    display: grid;
+    grid-template-areas: 
+        "promocion contacto"
+        "promocion contacto"
+        "mapa contacto";
+    grid-template-columns: 0.6fr 1.5fr;
+    grid-template-rows: auto-fill;
+    column-gap: 5px;
+    margin: 20px;
+    margin-left: 50px; 
+    justify-items: center;
+    align-items: flex-start;
+    .promocion {
+        grid-area: promocion;
+        @include flex (flex, center, center);
+        flex-direction: column;
+        padding: map-get($boton, relleno);
+        margin: map-get($boton, margen);
+        margin-top: 0;
+        width: 83%;
+        height: 400px;
+        border: nth($colores, 2) solid 2px;
+        border-radius: 3%;
+        img{
+            width: 100px;
+            height: 100px;
+            padding: map-get($boton, relleno);
+            margin: 5px;
+        }
+        h2 {
+            font-family: $fuente-secundaria;
+            font-weight: bold;
+            font-size: nth($tamano-letra, 4);
+            padding: map-get($boton, relleno) 5px;
+            margin: 5px;
+            width: 250px;
+            height: 80px;
+            text-align: center;
+        }
+        h3 {
+            font-family: $fuente-principal;
+            font-weight: bolder;
+            font-size: nth($tamano-letra, 1);
+            padding: map-get($boton, relleno) 5px;
+            margin: 5px;
+            text-align: center;
+        }
+        a {
+            .botonPromocion {
+                color: nth($colores, 4);
+                background-color: nth($colores, 5);
+                padding: map-get($boton, relleno);
+                border-radius: map-get($boton, redondeado);
+            }
+        }
+    }
+    .mapa {
+        grid-area: mapa;
+        border: nth($colores, 2) solid 2px;
+        width: 83%;
+        height: 204px;
+        iframe {
+            width: 100%;
+            height: 200px;
+        }
+    }
+    .contacto {
+        grid-area: contacto;
+        width: 80%;
+        height: 100%;
+        font-family: $fuente-principal;
+        font-weight: bold;
+        font-size: nth($tamano-letra, 1);
+        form {
+            width: 100%;
+            height: 100%;
+            margin: 2px;
+            padding: 5px;
+            @include flex (flex, space-between, flex-start);
+            flex-direction: column;
+            border: nth($colores, 2) solid 2px;
+            border-radius: 3%;
+            label {
+                width: 100%;
+                &::first-letter {
+                    font-family: $fuente-secundaria;
+                }
+                .input {
+                    width: 80%;
+                    height: 30px;
+                    padding: 5px;
+                    margin: 5px;
+                    border-radius: 8px;
+                    @include flex (flex, center, flex-start);
+                    flex-direction: column;
+                    background-color: nth($colores, 2);
+                    &:focus {
+                        background-color: white;
+                        transition: background-color 2s linear 1s;
+                    }
+                }
+                .textarea {
+                    resize: none;
+                    height: 18vh;
+                }
+            }
+            .botonContacto {
+                color: nth($colores, 4);
+                background-color: nth($colores, 5);
+                padding: map-get($boton, relleno);
+                border-radius: map-get($boton, redondeado);
+                align-self: flex-end;
+                margin: map-get($boton, margen)
+            }
+        }
+    }
+}

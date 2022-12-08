@@ -1,0 +1,33 @@
+
+$colores:
+#C29689,
+#3C7566,
+#C25B3E,
+white,
+black,
+rgb(58, 52, 52);
+
+$fuente-principal: 'Lato', sans-serif;
+$fuente-secundaria: 'Cedarville Cursive', cursiva;
+
+$tamano-letra:
+20px,
+18px,
+40px,
+25px,
+15px,
+30px,
+10px;
+
+@mixin flex($flex, $justify, $align) {
+    display: $flex;
+    justify-content: $justify;
+    align-items: $align;    
+}
+
+$boton:(
+    relleno: 10px,
+    margen: 10px,
+    redondeado: 5%,
+);
+

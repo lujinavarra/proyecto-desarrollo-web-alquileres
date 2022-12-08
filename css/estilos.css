@@ -1,0 +1,1003 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2? family= Cedarville+Cursive & family= Lato & display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+/* selectores para todo el sitio*/
+.body {
+  background-color: #C29689;
+  min-height: 100vh; }
+
+.linea {
+  border-top: 2px solid #3C7566;
+  height: 2px;
+  max-width: 90vw;
+  padding: 0;
+  margin: auto; }
+
+/*HEADER*/
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  header div a img {
+    width: 80px;
+    height: 80px;
+    margin: 5px; }
+  header nav div div ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #C29689;
+    padding: 0;
+    margin: 0; }
+    header nav div div ul li {
+      list-style-type: none; }
+      header nav div div ul li a {
+        text-decoration: none;
+        color: black;
+        font-family: "Lato", sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+        padding: 5px;
+        margin: 5px; }
+        header nav div div ul li a:visited {
+          color: #C25B3E; }
+      header nav div div ul li .boton {
+        color: white;
+        background-color: black;
+        padding: 10px;
+        border-radius: 5%;
+        margin-right: 10px; }
+        header nav div div ul li .boton:hover {
+          color: black;
+          background-color: white;
+          transition: 2s; }
+
+/* MAIN*/
+.main {
+  min-height: 75vh; }
+
+/* selectores del index*/
+.buscadorIndex {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column; }
+  .buscadorIndex section h1 {
+    font-family: "Lato", sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    padding: 10px 5px;
+    margin: 5px; }
+    .buscadorIndex section h1::first-letter {
+      font-family: "Cedarville Cursive", cursiva; }
+  .buscadorIndex section .gridContenedorFormulario {
+    display: grid;
+    grid-template-areas: "buscador buscador" "select select" "monto monto" "input input";
+    grid-template-columns: auto;
+    grid-template-rows: 0.6fr 1.5fr 1.5fr 0.6fr;
+    grid-row-gap: 5px;
+    border: #3C7566 solid 2px;
+    margin: 10px;
+    border-radius: 3%;
+    padding: 10px;
+    padding-top: 20px;
+    background-color: #C25B3E;
+    opacity: 0.8;
+    padding-bottom: 0;
+    margin-bottom: 0; }
+    .buscadorIndex section .gridContenedorFormulario .buscador {
+      grid-area: buscador;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: row;
+      margin: 5px;
+      margin-top: 10px;
+      padding: 5px;
+      padding-top: 10px;
+      border: none;
+      font-family: "Lato", sans-serif;
+      font-weight: bold;
+      font-size: 20px;
+      min-height: 20%; }
+    .buscadorIndex section .gridContenedorFormulario .select {
+      grid-area: select;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-direction: column;
+      margin: 5px;
+      padding: 5px;
+      border: none;
+      font-family: "Lato", sans-serif;
+      font-weight: bold;
+      font-size: 20px;
+      min-height: 20%; }
+      .buscadorIndex section .gridContenedorFormulario .select .provincia {
+        margin: 5px;
+        padding: 5px;
+        text-align: center; }
+      .buscadorIndex section .gridContenedorFormulario .select .selectInput {
+        width: 30%;
+        height: 40px;
+        padding: 5px;
+        margin: 5px;
+        border-radius: 8px;
+        font-family: "Lato", sans-serif;
+        font-weight: lighter;
+        font-size: 20px; }
+    .buscadorIndex section .gridContenedorFormulario .monto {
+      grid-area: monto;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      justify-self: center;
+      margin: 2px;
+      margin-left: 50px;
+      padding: 2px;
+      border: none;
+      font-family: "Lato", sans-serif;
+      font-weight: bold;
+      font-size: 20px;
+      min-height: 20%; }
+      .buscadorIndex section .gridContenedorFormulario .monto .divMonto .selectInput {
+        width: 60%;
+        height: 30px;
+        padding: 5px;
+        margin: 5px;
+        border-radius: 8px; }
+    .buscadorIndex section .gridContenedorFormulario .input {
+      grid-area: input;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .buscadorIndex section .gridContenedorFormulario .input .botonIndex {
+        color: white;
+        background-color: black;
+        padding: 10px;
+        border-radius: 5%;
+        font-size: 20px;
+        margin: 10px; }
+        .buscadorIndex section .gridContenedorFormulario .input .botonIndex:hover {
+          background-color: #C25B3E;
+          transition: 2s; }
+
+/*selectores de pagina inmuebles*/
+.gridContenedorInmuebles {
+  display: grid;
+  grid-template-areas: "buscadorCompleto selector" "buscadorCompleto resultadoUno" "buscadorCompleto resultadoDos" "buscadorCompleto resultadoTres";
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto;
+  column-gap: 5px;
+  margin: 20px;
+  margin-left: 50px;
+  justify-items: center;
+  align-items: flex-start; }
+  .gridContenedorInmuebles .buscadorCompleto {
+    grid-area: buscadorCompleto;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .gridContenedorInmuebles .buscadorCompleto .formulario {
+      width: 100%;
+      height: 100%;
+      border: #3C7566 solid 2px;
+      margin: 10px;
+      border-radius: 3%;
+      padding: 10px;
+      padding-top: 20px;
+      background-color: #C25B3E;
+      opacity: 0.8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column; }
+      .gridContenedorInmuebles .buscadorCompleto .formulario .radioInmuebles {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        margin: 2px;
+        padding: 2px;
+        border: none;
+        font-family: "Lato", sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+        min-height: 20%; }
+        .gridContenedorInmuebles .buscadorCompleto .formulario .radioInmuebles label {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          margin: 5px;
+          padding: 5px; }
+          .gridContenedorInmuebles .buscadorCompleto .formulario .radioInmuebles label input {
+            margin: 5px; }
+      .gridContenedorInmuebles .buscadorCompleto .formulario .selectInmuebles {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        margin: 2px;
+        padding: 2px;
+        border: none;
+        font-family: "Lato", sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+        min-height: 15%; }
+        .gridContenedorInmuebles .buscadorCompleto .formulario .selectInmuebles .selectInput {
+          width: 150px;
+          height: 30px;
+          padding: 5px;
+          margin: 5px;
+          border-radius: 8px;
+          font-family: "Lato", sans-serif;
+          font-weight: lighter;
+          font-size: 15px; }
+      .gridContenedorInmuebles .buscadorCompleto .formulario .montoInmuebles {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: row;
+        margin: 2px;
+        margin-left: 20px;
+        padding: 2px;
+        border: none;
+        font-family: "Lato", sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+        min-height: 20%; }
+        .gridContenedorInmuebles .buscadorCompleto .formulario .montoInmuebles div .selectInput {
+          width: 150px;
+          height: 30px;
+          padding: 5px;
+          margin: 5px;
+          border-radius: 8px;
+          font-family: "Lato", sans-serif;
+          font-weight: lighter;
+          font-size: 15px; }
+      .gridContenedorInmuebles .buscadorCompleto .formulario .checkbox {
+        display: flex;
+        align-items: flex-start;
+        font-family: "Lato", sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+        margin: 5px;
+        padding: 10px; }
+        .gridContenedorInmuebles .buscadorCompleto .formulario .checkbox p label input {
+          margin: 5px; }
+      .gridContenedorInmuebles .buscadorCompleto .formulario .botonBuscador {
+        color: white;
+        background-color: black;
+        padding: 10px;
+        border-radius: 5%;
+        align-self: center; }
+  .gridContenedorInmuebles .selector {
+    grid-area: selector;
+    font-family: "Lato", sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 20px; }
+    .gridContenedorInmuebles .selector .selectSelector {
+      width: 150px;
+      height: 30px;
+      padding: 5px;
+      margin: 5px;
+      border-radius: 8px;
+      font-family: "Lato", sans-serif;
+      font-weight: lighter;
+      font-size: 15px; }
+  .gridContenedorInmuebles .resultadoUno {
+    grid-area: resultadoUno;
+    display: flex;
+    border: #3C7566 solid 2px;
+    border-radius: 3%;
+    margin: 20px;
+    box-shadow: 4px 9px 24px 4px rgba(60, 117, 102, 0.73);
+    -webkit-box-shadow: 4px 9px 24px 4px rgba(60, 117, 102, 0.73);
+    -moz-box-shadow: 4px 9px 24px 4px rgba(60, 117, 102, 0.73); }
+  .gridContenedorInmuebles img {
+    width: 400px;
+    height: 300px;
+    border-radius: 3%;
+    transition: transform 2s; }
+    .gridContenedorInmuebles img:hover {
+      transform: scale(1.2); }
+  .gridContenedorInmuebles .txtInput {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    font-family: "Lato", sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 5px; }
+    .gridContenedorInmuebles .txtInput .botonResultado {
+      color: white;
+      background-color: black;
+      padding: 10px;
+      border-radius: 5%;
+      align-self: flex-end;
+      margin: 10px; }
+
+.resultadoDos {
+  grid-area: resultadoDos;
+  display: flex;
+  border: #3C7566 solid 2px;
+  border-radius: 3%;
+  margin: 20px;
+  box-shadow: 4px 9px 24px 4px rgba(60, 117, 102, 0.73);
+  -webkit-box-shadow: 4px 9px 24px 4px rgba(60, 117, 102, 0.73);
+  -moz-box-shadow: 4px 9px 24px 4px rgba(60, 117, 102, 0.73); }
+  .resultadoDos img {
+    width: 400px;
+    height: 300px;
+    border-radius: 3%;
+    transition: transform 2s; }
+    .resultadoDos img:hover {
+      transform: scale(1.2); }
+  .resultadoDos .txtInput {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    font-family: "Lato", sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 5px; }
+    .resultadoDos .txtInput .botonResultado {
+      color: white;
+      background-color: black;
+      padding: 10px;
+      border-radius: 5%;
+      align-self: flex-end;
+      margin: 10px; }
+
+.resultadoTres {
+  grid-area: resultadoTres;
+  display: flex;
+  border: #3C7566 solid 2px;
+  border-radius: 3%;
+  margin: 20px;
+  box-shadow: 4px 9px 24px 4px rgba(60, 117, 102, 0.73);
+  -webkit-box-shadow: 4px 9px 24px 4px rgba(60, 117, 102, 0.73);
+  -moz-box-shadow: 4px 9px 24px 4px rgba(60, 117, 102, 0.73); }
+  .resultadoTres img {
+    width: 200px;
+    height: 300px;
+    border-radius: 3%;
+    transition: transform 2s; }
+    .resultadoTres img:hover {
+      transform: scale(1.2); }
+  .resultadoTres .txtInput {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    font-family: "Lato", sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 5px; }
+    .resultadoTres .txtInput .botonResultado {
+      color: white;
+      background-color: black;
+      padding: 10px;
+      border-radius: 5%;
+      align-self: flex-end;
+      margin: 10px; }
+
+/*selectores de pagina inmobiliarias*/
+.gridContenedorInmobiliarias {
+  display: grid;
+  grid-template-areas: "buscadorInmobiliarias selectorUno" "buscadorInmobiliarias inmobiliariaUno" "buscadorInmobiliarias inmobiliariaDos" "buscadorInmobiliarias inmobiliariaTres";
+  grid-template-columns: 0.6fr 2fr;
+  grid-template-rows: auto;
+  column-gap: 5px;
+  margin: 20px;
+  margin-left: 50px;
+  justify-items: center;
+  align-items: flex-start; }
+  .gridContenedorInmobiliarias section .buscadorInmobiliarias {
+    grid-area: buscadorInmobiliarias;
+    width: 20vw;
+    height: 20vh;
+    border: #3C7566 solid 2px;
+    margin: 10px;
+    border-radius: 3%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    background-color: #C25B3E;
+    opacity: 0.8;
+    color: black; }
+    .gridContenedorInmobiliarias section .buscadorInmobiliarias label .selectInput {
+      width: 150px;
+      height: 30px;
+      padding: 5px;
+      margin: 5px;
+      border-radius: 8px;
+      font-family: "Lato", sans-serif;
+      font-weight: lighter;
+      font-size: 15px; }
+    .gridContenedorInmobiliarias section .buscadorInmobiliarias .botonInmobiliarias {
+      color: white;
+      background-color: black;
+      padding: 10px;
+      border-radius: 5%;
+      font-size: 20px;
+      font-family: "Lato", sans-serif; }
+  .gridContenedorInmobiliarias section .selectorUno {
+    grid-area: selectorUno;
+    display: flex;
+    justify-content: flex-end;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    margin-right: 20px; }
+    .gridContenedorInmobiliarias section .selectorUno label .selectInput {
+      width: 150px;
+      height: 30px;
+      padding: 5px;
+      margin: 5px;
+      border-radius: 8px;
+      font-family: "Lato", sans-serif;
+      font-weight: lighter;
+      font-size: 15px; }
+  .gridContenedorInmobiliarias section .inmobiliariaUno {
+    grid-area: inmobiliariaUno;
+    display: flex;
+    border: #3C7566 solid 2px;
+    border-radius: 3%;
+    margin: 20px;
+    box-shadow: 4px 9px 24px 4px rgba(60, 117, 102, 0.73);
+    -webkit-box-shadow: 4px 9px 24px 4px rgba(60, 117, 102, 0.73);
+    -moz-box-shadow: 4px 9px 24px 4px rgba(60, 117, 102, 0.73); }
+    .gridContenedorInmobiliarias section .inmobiliariaUno .logo {
+      width: 250px;
+      height: 250px; }
+    .gridContenedorInmobiliarias section .inmobiliariaUno div p {
+      font-family: "Lato", sans-serif;
+      font-weight: bold;
+      font-size: 20px;
+      margin: 5px;
+      padding: 10px; }
+    .gridContenedorInmobiliarias section .inmobiliariaUno div .botonInmobiliarias {
+      color: white;
+      background-color: black;
+      padding: 10px;
+      border-radius: 5%;
+      font-size: 20px;
+      font-family: 'Lato', sans-serif;
+      margin-left: 20px; }
+  .gridContenedorInmobiliarias section .inmobiliariaDos {
+    grid-area: inmobiliariaDos;
+    display: flex;
+    border: #3C7566 solid 2px;
+    border-radius: 3%;
+    margin: 20px;
+    box-shadow: 4px 9px 24px 4px rgba(60, 117, 102, 0.73);
+    -webkit-box-shadow: 4px 9px 24px 4px rgba(60, 117, 102, 0.73);
+    -moz-box-shadow: 4px 9px 24px 4px rgba(60, 117, 102, 0.73); }
+    .gridContenedorInmobiliarias section .inmobiliariaDos .logo {
+      width: 250px;
+      height: 250px; }
+    .gridContenedorInmobiliarias section .inmobiliariaDos div p {
+      font-family: "Lato", sans-serif;
+      font-weight: bold;
+      font-size: 20px;
+      margin: 5px;
+      padding: 10px; }
+    .gridContenedorInmobiliarias section .inmobiliariaDos div .botonInmobiliarias {
+      color: white;
+      background-color: black;
+      padding: 10px;
+      border-radius: 5%;
+      font-size: 20px;
+      font-family: 'Lato', sans-serif;
+      margin-left: 20px; }
+  .gridContenedorInmobiliarias section .inmobiliariaTres {
+    grid-area: inmobiliariaTres;
+    display: flex;
+    border: #3C7566 solid 2px;
+    border-radius: 3%;
+    margin: 20px;
+    box-shadow: 4px 9px 24px 4px rgba(60, 117, 102, 0.73);
+    -webkit-box-shadow: 4px 9px 24px 4px rgba(60, 117, 102, 0.73);
+    -moz-box-shadow: 4px 9px 24px 4px rgba(60, 117, 102, 0.73); }
+    .gridContenedorInmobiliarias section .inmobiliariaTres .logo {
+      width: 250px;
+      height: 250px; }
+    .gridContenedorInmobiliarias section .inmobiliariaTres div p {
+      font-family: "Lato", sans-serif;
+      font-weight: bold;
+      font-size: 20px;
+      margin: 5px;
+      padding: 10px; }
+    .gridContenedorInmobiliarias section .inmobiliariaTres div .botonInmobiliarias {
+      color: white;
+      background-color: black;
+      padding: 10px;
+      border-radius: 5%;
+      font-size: 20px;
+      font-family: 'Lato', sans-serif;
+      margin-left: 20px; }
+
+/* selectores principalmente de contacto*/
+.gridContenedorContacto {
+  display: grid;
+  grid-template-areas: "promocion contacto" "promocion contacto" "mapa contacto";
+  grid-template-columns: 0.6fr 1.5fr;
+  grid-template-rows: auto-fill;
+  column-gap: 5px;
+  margin: 20px;
+  margin-left: 50px;
+  justify-items: center;
+  align-items: flex-start; }
+  .gridContenedorContacto .promocion {
+    grid-area: promocion;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    margin: 10px;
+    margin-top: 0;
+    width: 83%;
+    height: 400px;
+    border: #3C7566 solid 2px;
+    border-radius: 3%; }
+    .gridContenedorContacto .promocion img {
+      width: 100px;
+      height: 100px;
+      padding: 10px;
+      margin: 5px; }
+    .gridContenedorContacto .promocion h2 {
+      font-family: "Cedarville Cursive", cursiva;
+      font-weight: bold;
+      font-size: 25px;
+      padding: 10px 5px;
+      margin: 5px;
+      width: 250px;
+      height: 80px;
+      text-align: center; }
+    .gridContenedorContacto .promocion h3 {
+      font-family: "Lato", sans-serif;
+      font-weight: bolder;
+      font-size: 20px;
+      padding: 10px 5px;
+      margin: 5px;
+      text-align: center; }
+    .gridContenedorContacto .promocion a .botonPromocion {
+      color: white;
+      background-color: black;
+      padding: 10px;
+      border-radius: 5%; }
+  .gridContenedorContacto .mapa {
+    grid-area: mapa;
+    border: #3C7566 solid 2px;
+    width: 83%;
+    height: 204px; }
+    .gridContenedorContacto .mapa iframe {
+      width: 100%;
+      height: 200px; }
+  .gridContenedorContacto .contacto {
+    grid-area: contacto;
+    width: 80%;
+    height: 100%;
+    font-family: "Lato", sans-serif;
+    font-weight: bold;
+    font-size: 20px; }
+    .gridContenedorContacto .contacto form {
+      width: 100%;
+      height: 100%;
+      margin: 2px;
+      padding: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-direction: column;
+      border: #3C7566 solid 2px;
+      border-radius: 3%; }
+      .gridContenedorContacto .contacto form label {
+        width: 100%; }
+        .gridContenedorContacto .contacto form label::first-letter {
+          font-family: "Cedarville Cursive", cursiva; }
+        .gridContenedorContacto .contacto form label .input {
+          width: 80%;
+          height: 30px;
+          padding: 5px;
+          margin: 5px;
+          border-radius: 8px;
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+          flex-direction: column;
+          background-color: #3C7566; }
+          .gridContenedorContacto .contacto form label .input:focus {
+            background-color: white;
+            transition: background-color 2s linear 1s; }
+        .gridContenedorContacto .contacto form label .textarea {
+          resize: none;
+          height: 18vh; }
+      .gridContenedorContacto .contacto form .botonContacto {
+        color: white;
+        background-color: black;
+        padding: 10px;
+        border-radius: 5%;
+        align-self: flex-end;
+        margin: 10px; }
+
+/*selectores de la pagina de ingreso*/
+.mainIngreso {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .mainIngreso .ingreso {
+    border: #3C7566 solid 2px;
+    margin: 5px;
+    border-radius: 3%;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #C25B3E;
+    opacity: 0.8;
+    color: black;
+    height: 70vh;
+    width: 40vw; }
+    .mainIngreso .ingreso .ingresoNuevo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100%; }
+      .mainIngreso .ingreso .ingresoNuevo h2 {
+        font-size: 25px;
+        padding: 5px;
+        margin: 5px;
+        width: 250px;
+        height: 70px;
+        text-align: center;
+        font-weight: bold; }
+      .mainIngreso .ingreso .ingresoNuevo .formularioIngreso {
+        height: 100%;
+        width: 100%;
+        border: none;
+        display: flex;
+        flex-direction: column; }
+        .mainIngreso .ingreso .ingresoNuevo .formularioIngreso .datos {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          max-height: 30%; }
+          .mainIngreso .ingreso .ingresoNuevo .formularioIngreso .datos label {
+            padding: 5px;
+            margin: 5px;
+            font-family: "Lato", sans-serif;
+            font-weight: bold;
+            font-size: 20px; }
+          .mainIngreso .ingreso .ingresoNuevo .formularioIngreso .datos .selectInput {
+            width: 150px;
+            height: 30px;
+            padding: 5px;
+            margin: 5px;
+            border-radius: 8px;
+            font-family: "Lato", sans-serif;
+            font-weight: lighter;
+            font-size: 15px; }
+        .mainIngreso .ingreso .ingresoNuevo .formularioIngreso .botonIngreso {
+          text-decoration: none;
+          color: white;
+          background-color: black;
+          padding: 10px;
+          border-radius: 5%;
+          align-self: center;
+          justify-self: center;
+          margin-bottom: 20px; }
+        .mainIngreso .ingreso .ingresoNuevo .formularioIngreso a {
+          text-decoration: none;
+          font-family: "Lato", sans-serif;
+          font-weight: bold;
+          font-size: 15px;
+          color: black;
+          padding: 10px;
+          margin: 10px;
+          align-self: flex-end;
+          text-align: center; }
+    .mainIngreso .ingreso section {
+      height: 100%; }
+      .mainIngreso .ingreso section h2 {
+        font-size: 25px;
+        padding: 5px;
+        margin: 5px;
+        width: 250px;
+        height: 70px;
+        text-align: center;
+        font-weight: bold; }
+      .mainIngreso .ingreso section .registrarse {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 80%;
+        width: 80%; }
+        .mainIngreso .ingreso section .registrarse .botonIngreso {
+          text-decoration: none;
+          color: white;
+          background-color: black;
+          padding: 10px;
+          border-radius: 5%;
+          align-self: center;
+          justify-self: center;
+          margin-bottom: 20px; }
+
+/*FOOTER*/
+.pie {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .pie .redes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 50px;
+    width: 30vw;
+    background-color: white;
+    border: #3a3434 2px solid;
+    padding: 5px;
+    margin-top: 10px; }
+    .pie .redes .copyright {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start; }
+      .pie .redes .copyright img {
+        width: 25px;
+        height: 25px;
+        padding: 5px; }
+      .pie .redes .copyright h3 {
+        font-family: "Lato", sans-serif;
+        font-weight: lighter;
+        font-size: 18px;
+        padding: 2px; }
+    .pie .redes .contactosRedes {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end; }
+      .pie .redes .contactosRedes a img {
+        width: 30px;
+        height: 30px;
+        padding: 5px; }
+
+/*mediaqueries*/
+/*tamaño netbook*/
+@media screen and (max-width: 1120px) {
+  /*cambios en contacto*/
+  .gridContenedorContacto .contacto form .botonContacto {
+    margin: 20px; }
+  .gridContenedorContacto .mapa {
+    height: 354px; }
+  .gridContenedorContacto .mapa iframe {
+    height: 350px; }
+  /*cambios en inmuebles*/
+  .resultadoUno .txtInput, .resultadoDos .txtInput, .resultadoTres .txtInput {
+    font-size: 15px; }
+  .gridContenedorInmuebles {
+    grid-template-columns: 0.6fr 2fr;
+    margin-left: 20px; }
+  /*cambios en inmobiliarias*/
+  .gridContenedorInmobiliarias section .inmobiliariaUno div p, .gridContenedorInmobiliarias section .inmobiliariaDos div p, .gridContenedorInmobiliarias section .inmobiliariaTres div p {
+    font-size: 15px; }
+  /*cambios en ingreso*/
+  .mainIngreso .ingreso {
+    width: 70vw; } }
+
+/* tamaño especial en el que el footer se ve mal y hay que acomodar el header*/
+@media screen and (max-width: 990px) {
+  /*cambios header*/
+  header {
+    flex-direction: row-reverse; }
+  header div {
+    display: flex;
+    justify-content: center;
+    width: 100%; }
+  header nav ul {
+    align-items: flex-start; }
+  header nav ul li .boton {
+    margin-top: 50px;
+    margin-left: 10px;
+    padding: 5px; }
+  /*cambios en inmuebles*/
+  .gridContenedorInmuebles {
+    grid-template-columns: 0.4fr 1fr;
+    margin: 10px; }
+  .gridContenedorInmuebles .buscadorCompleto .formulario .radioInmuebles, .gridContenedorInmuebles .buscadorCompleto .formulario .montoInmuebles, .resultadoUno, .resultadoDos, .resultadoTres {
+    flex-direction: column; }
+  .resultadoUno img, .resultadoDos img, .resultadoTres img {
+    width: 200px;
+    height: 150px;
+    align-self: center; }
+  /*cambios en inmobiliarias*/
+  .inmobiliariaUno, .inmobiliariaDos, .inmobiliariaTres {
+    flex-direction: column;
+    align-items: center; }
+  .gridContenedorInmobiliarias section .inmobiliariaUno div .botonInmobiliarias,
+  .gridContenedorInmobiliarias section .inmobiliariaDos div .botonInmobiliarias,
+  .gridContenedorInmobiliarias section .inmobiliariaTres div .botonInmobiliarias {
+    margin-bottom: 10px; }
+  .inmobiliariaUno .logo, .inmobiliariaDos .logo, .inmobiliariaTres .logo {
+    width: 200px;
+    height: 200px; }
+  .gridContenedorInmobiliarias section .buscadorInmobiliarias label .selectInput {
+    width: 100px; }
+  .gridContenedorInmobiliarias section .buscadorInmobiliarias {
+    height: 15vh; }
+  .pie .redes {
+    width: 50vw; } }
+
+/*tamaño tablet posicion vertical*/
+@media screen and (max-width: 760px) {
+  /*cambios en contacto*/
+  .gridContenedorContacto {
+    grid-template-columns: 0.4fr 1.3fr; }
+  /*cambios en inmuebles*/
+  .gridContenedorInmuebles {
+    grid-template-areas: "buscadorCompleto" "selector" "resultadoUno" "resultadoDos" "resultadoTres";
+    grid-template-columns: 1.5fr;
+    grid-template-rows: auto-fill; }
+  .gridContenedorInmuebles .buscadorCompleto .formulario .radioInmuebles, .gridContenedorInmuebles .buscadorCompleto .formulario .montoInmuebles, .gridContenedorInmuebles .buscadorCompleto .formulario .checkbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    max-width: 50%;
+    align-self: center; }
+  .formulario .botonBuscador {
+    align-self: flex-end;
+    justify-self: flex-start;
+    margin-bottom: 20px; }
+  .formulario .selectInmuebles {
+    height: 10%; }
+  /*cambios en inmobiliarias*/
+  .gridContenedorInmobiliarias {
+    grid-template-areas: "buscadorInmobiliarias" "selectorUno" "inmobiliariaUno" "inmobiliariaDos" "inmobiiariaTres";
+    grid-template-columns: 1.5fr;
+    grid-template-rows: auto-fill; }
+  .gridContenedorInmobiliarias section .buscadorInmobiliarias {
+    width: 40vw; }
+  .gridContenedorInmobiliarias section .buscadorInmobiliarias label .selectInput {
+    width: 150px; }
+  /*cambios en ingreso*/
+  .mainIngreso .ingreso section h2, .mainIngreso .ingreso .ingresoNuevo h2 {
+    font-size: 20px;
+    width: 200px; } }
+
+/*mobile 630px*/
+@media screen and (max-width: 630px) {
+  /*pagina de contacto*/
+  .gridContenedorContacto {
+    grid-template-areas: "promocion" "contacto" "mapa";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1.5fr 0.5fr; }
+  .gridContenedorContacto .mapa {
+    height: 254px;
+    margin-top: 20px;
+    width: 80%; }
+  .gridContenedorContacto .mapa iframe {
+    height: 250px; }
+  .gridContenedorContacto .promocion {
+    width: 80%; } }
+
+/*mobile 540px*/
+@media screen and (max-width: 540px) {
+  /*cambios en index*/
+  .buscadorIndex section h1 {
+    font-size: 30px; }
+  .gridContenedorFormulario .monto {
+    margin-top: 10px; }
+  .gridContenedorFormulario .select .selectInput {
+    width: 40%; }
+  /*cambios en ingreso*/
+  .mainIngreso .ingreso {
+    width: 80vw; }
+  .mainIngreso .ingreso .ingresoNuevo .formularioIngreso .datos .selectInput {
+    width: 100px; }
+  .mainIngreso .ingreso section h2, .mainIngreso .ingreso .ingresoNuevo h2 {
+    font-size: 15px;
+    width: 150px; }
+  footer .redes {
+    width: 80vw; } }
+
+/*tamaño mobile 400px*/
+@media screen and (max-width: 400px) {
+  /*cambios en header*/
+  header div a img {
+    width: 40px;
+    height: 40px; }
+  /*cambios en index*/
+  .buscadorIndex section h1 {
+    font-size: 25px; }
+  .gridContenedorFormulario .monto {
+    margin-left: 20px; }
+  .gridContenedorFormulario .select .selectInput {
+    width: 50%;
+    height: 35px; }
+  /*cambios en inmuebles*/
+  .gridContenedorInmuebles {
+    margin-left: 0; }
+  .gridContenedorInmuebles .buscadorCompleto .formulario {
+    width: 80%;
+    margin: 5px;
+    padding: 5px; }
+  .gridContenedorInmuebles .buscadorCompleto .formulario .montoInmuebles, .gridContenedorInmuebles .buscadorCompleto .formulario .radioInmuebles, .gridContenedorInmuebles .buscadorCompleto .formulario .selectInmuebles, .gridContenedorInmuebles .buscadorCompleto .formulario .checkbox {
+    font-size: 15px;
+    margin: 5px;
+    padding: 5px; }
+  .gridContenedorInmuebles .buscadorCompleto .formulario .radioInmuebles {
+    justify-content: space-evenly; }
+  .formulario .radioInmuebles label {
+    width: 80%; }
+  .gridContenedorInmuebles .buscadorCompleto .formulario .montoInmuebles {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .formulario .montoInmuebles div, .formulario .selectInmuebles {
+    margin: 5px;
+    padding: 5px; }
+  /*cambios en inmobiliarias*/
+  .gridContenedorInmobiliarias section .buscadorInmobiliarias label .selectInput {
+    width: 100px; }
+  .gridContenedorInmobiliarias .buscadorInmobiliarias {
+    width: 70vw; }
+  /*cambios en ingreso*/
+  .mainIngreso .ingreso {
+    width: 90vw; } }
+
+/*tamaño mobile (acomodar para tamaños mas pequeños) 370px*/
+@media screen and (max-width: 370px) {
+  /*cambios de index*/
+  .gridContenedorFormulario .buscador, .gridContenedorFormulario .select, .gridContenedorFormulario .select .selectInput, .gridContenedorFormulario .monto {
+    font-size: 15px; }
+  /*cambios en contacto*/
+  .gridContenedorContacto {
+    margin-left: 20px; }
+  /*cambios en inmuebles*/
+  .gridContenedorInmuebles {
+    margin-left: 0; }
+  .gridContenedorInmuebles .selector .selectSelector {
+    width: 100px;
+    padding: 2px;
+    margin: 2px;
+    font-size: 10px; }
+  .gridContenedorInmuebles .buscadorCompleto .formulario {
+    width: 70%;
+    margin: 2px;
+    padding: 2px; }
+  .selector label {
+    font-size: 10px; }
+  .gridContenedorInmuebles .buscadorCompleto .formulario .botonBuscador {
+    margin-bottom: 30px; }
+  .gridContenedorInmuebles .txtInput .botonResultado {
+    align-self: center;
+    margin: 5px; }
+  /*cambios en inmobiliarias*/
+  .gridContenedorInmobiliarias {
+    margin-left: 10px; }
+  .gridContenedorInmobiliarias section .buscadorInmobiliarias {
+    width: 60vw; }
+  /*cambios en footer*/
+  footer .redes {
+    justify-content: center;
+    width: 60vw; } }

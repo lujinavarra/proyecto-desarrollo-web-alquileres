@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2? family= Cedarville+Cursive & family= Lato & display=swap');
+@import "./variables";
+
+/* selectores para todo el sitio*/
+.body {
+    background-color: nth($colores, 1);
+    min-height: 100vh;
+}
+
+.linea {
+    border-top: 2px solid nth($colores, 2);
+    height: 2px;
+    max-width: 90vw;
+    padding: 0;
+    margin: auto;
+}

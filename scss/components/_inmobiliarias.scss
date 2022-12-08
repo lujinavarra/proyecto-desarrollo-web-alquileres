@@ -1,0 +1,173 @@
+@import "../base/variables";
+
+/*selectores de pagina inmobiliarias*/
+.gridContenedorInmobiliarias {
+    display: grid;
+    grid-template-areas: 
+    "buscadorInmobiliarias selectorUno"
+    "buscadorInmobiliarias inmobiliariaUno"
+    "buscadorInmobiliarias inmobiliariaDos"
+    "buscadorInmobiliarias inmobiliariaTres";
+    grid-template-columns: 0.6fr 2fr;
+    grid-template-rows: auto;
+    column-gap: 5px;
+    margin: 20px;
+    margin-left: 50px; 
+    justify-items: center;
+    align-items: flex-start;
+    section {
+        .buscadorInmobiliarias {
+            grid-area: buscadorInmobiliarias;
+            width: 20vw;
+            height: 20vh;
+            border: nth($colores, 2) solid 2px;
+            margin: map-get($boton, margen);
+            border-radius: 3%;
+            padding: map-get($boton, relleno);
+            @include flex (flex, space-around, center);
+            flex-direction: column;
+            background-color: nth($colores, 3);
+            opacity: 0.8;
+            color: nth($colores, 5);
+            label {
+                .selectInput {
+                    width: 150px;
+                    height: 30px;
+                    padding: 5px;
+                    margin: 5px;
+                    border-radius: 8px;
+                    font-family: $fuente-principal;
+                    font-weight: lighter;
+                    font-size: nth($tamano-letra, 5);
+                }
+            }
+            .botonInmobiliarias {
+                color: nth($colores, 4);
+                background-color: nth($colores, 5);
+                padding: map-get($boton, relleno);
+                border-radius: map-get($boton, redondeado);
+                font-size: nth($tamano-letra, 1);
+                font-family: $fuente-principal;
+            }
+        }
+    }
+    section {
+        .selectorUno {
+            grid-area: selectorUno;
+            display: flex;
+            justify-content: flex-end;
+            font-family: 'Lato', sans-serif;
+            font-weight: bold;
+            font-size: 20px;
+            margin-right: 20px;
+            label {
+                .selectInput {
+                    width: 150px;
+                    height: 30px;
+                    padding: 5px;
+                    margin: 5px;
+                    border-radius: 8px;
+                    font-family: $fuente-principal;
+                    font-weight: lighter;
+                    font-size: nth($tamano-letra, 5);
+                }
+            }
+        }
+        .inmobiliariaUno {
+            grid-area: inmobiliariaUno;
+            display: flex;
+            border: nth($colores, 2) solid 2px;
+            border-radius: 3%;
+            margin: 20px;
+            box-shadow: 4px 9px 24px 4px rgba(60,117,102,0.73);
+            -webkit-box-shadow: 4px 9px 24px 4px rgba(60,117,102,0.73);
+            -moz-box-shadow: 4px 9px 24px 4px rgba(60,117,102,0.73);
+            .logo {
+                width: 250px;
+                height: 250px;
+            }
+            div {
+                p {
+                    font-family: $fuente-principal;
+                    font-weight: bold;
+                    font-size: nth($tamano-letra, 1);
+                    margin: 5px;
+                    padding: map-get($boton, relleno);
+                }
+                .botonInmobiliarias {
+                    color: white;
+                    background-color: black;
+                    padding: 10px;
+                    border-radius: 5%;
+                    font-size: 20px;
+                    font-family: 'Lato', sans-serif;
+                    margin-left: 20px;
+                }
+            }
+        }
+        .inmobiliariaDos {
+            grid-area: inmobiliariaDos;
+            display: flex;
+            border: nth($colores, 2) solid 2px;
+            border-radius: 3%;
+            margin: 20px;
+            box-shadow: 4px 9px 24px 4px rgba(60,117,102,0.73);
+            -webkit-box-shadow: 4px 9px 24px 4px rgba(60,117,102,0.73);
+            -moz-box-shadow: 4px 9px 24px 4px rgba(60,117,102,0.73);
+            .logo {
+                width: 250px;
+                height: 250px;
+            }
+            div {
+                p {
+                    font-family: $fuente-principal;
+                    font-weight: bold;
+                    font-size: nth($tamano-letra, 1);
+                    margin: 5px;
+                    padding: map-get($boton, relleno);
+                }
+                .botonInmobiliarias {
+                    color: white;
+                    background-color: black;
+                    padding: 10px;
+                    border-radius: 5%;
+                    font-size: 20px;
+                    font-family: 'Lato', sans-serif;
+                    margin-left: 20px;
+                }
+            }
+        }
+        .inmobiliariaTres {
+            grid-area: inmobiliariaTres;
+            display: flex;
+            border: nth($colores, 2) solid 2px;
+            border-radius: 3%;
+            margin: 20px;
+            box-shadow: 4px 9px 24px 4px rgba(60,117,102,0.73);
+            -webkit-box-shadow: 4px 9px 24px 4px rgba(60,117,102,0.73);
+            -moz-box-shadow: 4px 9px 24px 4px rgba(60,117,102,0.73);
+            .logo {
+                width: 250px;
+                height: 250px;
+            }
+            div {
+                p {
+                    font-family: $fuente-principal;
+                    font-weight: bold;
+                    font-size: nth($tamano-letra, 1);
+                    margin: 5px;
+                    padding: map-get($boton, relleno);
+                }
+                .botonInmobiliarias {
+                    color: white;
+                    background-color: black;
+                    padding: 10px;
+                    border-radius: 5%;
+                    font-size: 20px;
+                    font-family: 'Lato', sans-serif;
+                    margin-left: 20px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,52 @@
+@import "../base/variables";
+/*FOOTER*/
+.pie {
+    @include flex (flex, center, center);
+    .redes {
+        @include flex (flex, space-between, center);
+        flex-wrap: wrap;
+        margin: 0 50px;
+        width: 30vw;
+        background-color: nth($colores, 4);
+        border: nth($colores, 6) 2px solid;
+        padding: 5px;
+        margin-top: 10px;
+        .copyright{
+            @include flex (flex, space-between, flex-start);
+            img {
+                width: 25px;
+                height: 25px;
+                padding: 5px;
+            }
+            h3 {
+                font-family: $fuente-principal;
+                font-weight: lighter;
+                font-size: nth($tamano-letra, 2);
+                padding: 2px;
+            }
+        }
+        .contactosRedes {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            a {
+                img {
+                    width: 30px;
+                    height: 30px;
+                    padding: 5px;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
