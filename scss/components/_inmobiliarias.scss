@@ -1,5 +1,3 @@
-@import "../base/variables";
-
 /*selectores de pagina inmobiliarias*/
 .gridContenedorInmobiliarias {
     display: grid;
@@ -19,7 +17,7 @@
         .buscadorInmobiliarias {
             grid-area: buscadorInmobiliarias;
             width: 20vw;
-            height: 30vh;
+            height: 40vh;
             border: nth($colores, 2) solid 2px;
             margin: map-get($boton, margen);
             border-radius: 3%;
@@ -33,9 +31,7 @@
                 .selectInput {
                     width: 150px;
                     height: 30px;
-                    padding: 5px;
-                    margin: 5px;
-                    border-radius: 8px;
+                    @extend %boxSelectInput;
                     font-family: $fuente-principal;
                     font-weight: lighter;
                     font-size: nth($tamano-letra, 5);
@@ -48,6 +44,7 @@
                 border-radius: map-get($boton, redondeado);
                 font-size: nth($tamano-letra, 1);
                 font-family: $fuente-principal;
+                margin: map-get($boton, margen);
             }
         }
     }
@@ -56,17 +53,15 @@
             grid-area: selectorUno;
             display: flex;
             justify-content: flex-end;
-            font-family: 'Lato', sans-serif;
+            font-family: $fuente-principal;
             font-weight: bold;
-            font-size: 20px;
+            font-size: nth($tamano-letra, 1);
             margin-right: 20px;
             label {
                 .selectInput {
                     width: 150px;
                     height: 30px;
-                    padding: 5px;
-                    margin: 5px;
-                    border-radius: 8px;
+                    @extend %boxSelectInput;
                     font-family: $fuente-principal;
                     font-weight: lighter;
                     font-size: nth($tamano-letra, 5);
@@ -77,16 +72,15 @@
             grid-area: inmobiliariaUno;
             display: flex;
             border: nth($colores, 2) solid 2px;
-            border-radius: 3%;
-            margin: 20px;
-            box-shadow: 4px 9px 24px 4px rgba(60,117,102,0.73);
-            -webkit-box-shadow: 4px 9px 24px 4px rgba(60,117,102,0.73);
-            -moz-box-shadow: 4px 9px 24px 4px rgba(60,117,102,0.73);
+            @extend %resultadoInmuebles;
             .logo {
                 width: 250px;
                 height: 250px;
+                border-radius: 3%;
             }
             div {
+                @include flex (flex, center, flex-start);
+                flex-direction: column;
                 p {
                     font-family: $fuente-principal;
                     font-weight: bold;
@@ -97,11 +91,12 @@
                 .botonInmobiliarias {
                     color: white;
                     background-color: black;
-                    padding: 10px;
-                    border-radius: 5%;
-                    font-size: 20px;
-                    font-family: 'Lato', sans-serif;
+                    padding: map-get($boton, relleno);
+                    border-radius: map-get($boton, redondeado);
+                    font-size: nth($tamano-letra, 1);
+                    font-family: $fuente-principal;
                     margin-left: 20px;
+                    align-self: center;
                 }
             }
         }
@@ -109,16 +104,15 @@
             grid-area: inmobiliariaDos;
             display: flex;
             border: nth($colores, 2) solid 2px;
-            border-radius: 3%;
-            margin: 20px;
-            box-shadow: 4px 9px 24px 4px rgba(60,117,102,0.73);
-            -webkit-box-shadow: 4px 9px 24px 4px rgba(60,117,102,0.73);
-            -moz-box-shadow: 4px 9px 24px 4px rgba(60,117,102,0.73);
+            @extend %resultadoInmuebles;
             .logo {
                 width: 250px;
                 height: 250px;
+                border-radius: 3%;
             }
             div {
+                @include flex (flex, center, flex-start);
+                flex-direction: column;
                 p {
                     font-family: $fuente-principal;
                     font-weight: bold;
@@ -129,11 +123,12 @@
                 .botonInmobiliarias {
                     color: white;
                     background-color: black;
-                    padding: 10px;
-                    border-radius: 5%;
-                    font-size: 20px;
-                    font-family: 'Lato', sans-serif;
+                    padding: map-get($boton, relleno);
+                    border-radius: map-get($boton, redondeado);
+                    font-size: nth($tamano-letra, 1);
+                    font-family: $fuente-principal;
                     margin-left: 20px;
+                    align-self: center;
                 }
             }
         }
@@ -141,16 +136,15 @@
             grid-area: inmobiliariaTres;
             display: flex;
             border: nth($colores, 2) solid 2px;
-            border-radius: 3%;
-            margin: 20px;
-            box-shadow: 4px 9px 24px 4px rgba(60,117,102,0.73);
-            -webkit-box-shadow: 4px 9px 24px 4px rgba(60,117,102,0.73);
-            -moz-box-shadow: 4px 9px 24px 4px rgba(60,117,102,0.73);
+            @extend %resultadoInmuebles;
             .logo {
                 width: 250px;
                 height: 250px;
+                border-radius: 3%;
             }
             div {
+                @include flex (flex, center, flex-start);
+                flex-direction: column;
                 p {
                     font-family: $fuente-principal;
                     font-weight: bold;
@@ -161,11 +155,12 @@
                 .botonInmobiliarias {
                     color: white;
                     background-color: black;
-                    padding: 10px;
-                    border-radius: 5%;
-                    font-size: 20px;
-                    font-family: 'Lato', sans-serif;
+                    padding: map-get($boton, relleno);
+                    border-radius: map-get($boton, redondeado);
+                    font-size: nth($tamano-letra, 1);
+                    font-family: $fuente-principal;
                     margin-left: 20px;
+                    align-self: center;
                 }
             }
         }

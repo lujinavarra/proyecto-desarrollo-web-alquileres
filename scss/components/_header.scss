@@ -1,7 +1,9 @@
-@import "../base/variables";
 /*HEADER*/
 header {
     @include flex (flex, space-between, center);
+    opacity: 0.9;
+    @extend %dibujo-background;
+    background-color: nth($colores, 1);
     div {
         a {
             img {
@@ -17,6 +19,7 @@ header {
                 ul {
                     @include flex (flex, space-between, center);
                     background-color: nth($colores, 1);
+                    @extend %dibujo-background;
                     padding: 0;
                     margin: 0;
                     li {
@@ -29,8 +32,9 @@ header {
                             font-size: nth($tamano-letra, 1);
                             padding: 5px;
                             margin: 5px;
-                            &:visited {
+                            &:hover {
                                 color: nth($colores, 3);
+                                transition: 2s;
                             }
                         }
                         .boton {

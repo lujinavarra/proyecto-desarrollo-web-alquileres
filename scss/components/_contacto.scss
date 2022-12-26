@@ -1,5 +1,3 @@
-@import "../base/variables";
-
 /* selectores principalmente de contacto*/
 .gridContenedorContacto {
     display: grid;
@@ -88,13 +86,12 @@
                 width: 100%;
                 &::first-letter {
                     font-family: $fuente-secundaria;
+                    font-size: nth($tamano-letra, 4) ;
                 }
                 .input {
                     width: 80%;
                     height: 30px;
-                    padding: 5px;
-                    margin: 5px;
-                    border-radius: 8px;
+                    @extend %boxSelectInput;
                     @include flex (flex, center, flex-start);
                     flex-direction: column;
                     background-color: nth($colores, 2);

@@ -5,7 +5,8 @@ $colores:
 #C25B3E,
 white,
 black,
-rgb(58, 52, 52);
+rgb(58, 52, 52),
+#4B4D36;
 
 $fuente-principal: 'Lato', sans-serif;
 $fuente-secundaria: 'Cedarville Cursive', cursiva;
@@ -30,4 +31,44 @@ $boton:(
     margen: 10px,
     redondeado: 5%,
 );
+
+
+%dibujo-background {
+    background-image:  linear-gradient(30deg, #3C7566 12%, transparent 12.5%, transparent 87%, #3C7566 87.5%, #3C7566), linear-gradient(150deg, #3C7566 12%, transparent 12.5%, transparent 87%, #3C7566 87.5%, #3C7566), linear-gradient(30deg, #3C7566 12%, transparent 12.5%, transparent 87%, #3C7566 87.5%, #3C7566), linear-gradient(150deg, #3C7566 12%, transparent 12.5%, transparent 87%, #3C7566 87.5%, #3C7566), linear-gradient(60deg, #3C756677 25%, transparent 25.5%, transparent 75%, #3C756677 75%, #3C756677), linear-gradient(60deg, #3C756677 25%, transparent 25.5%, transparent 75%, #3C756677 75%, #3C756677);
+    background-size: 40px 70px;
+    background-position: 0 0, 0 0, 20px 35px, 20px 35px, 0 0, 20px 35px;
+};
+
+%textoHeroSection {
+    padding: 10px 5px;
+    margin: 5px;
+    backdrop-filter: blur(2px);
+};
+
+%boxBuscador {
+    margin: 5px;
+    padding: 5px;
+    border: none;
+};
+
+%boxSelectInput {
+    padding: 5px;
+    margin: 5px;
+    border-radius: 8px;
+};
+
+%boxBuscadorInmuebles {
+    margin: 2px;
+    padding: 2px;
+    border: none;
+};
+
+%resultadoInmuebles {
+    border-radius: 3%;
+    margin: 20px;
+    box-shadow: 4px 9px 24px 4px rgba(60, 117, 102, 0.73);
+    -webkit-box-shadow: 4px 9px 24px 4px rgba(60, 117, 102, 0.73);
+    -moz-box-shadow: 4px 9px 24px 4px rgba(60, 117, 102, 0.73);
+}
+
 

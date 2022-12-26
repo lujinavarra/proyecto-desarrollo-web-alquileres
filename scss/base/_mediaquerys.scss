@@ -1,4 +1,4 @@
-@import "./variables";
+// @import "./variables";
 
 
 /*mediaqueries*/
@@ -63,37 +63,37 @@
         margin: map-get($boton, margen);
     }
 
-    .gridContenedorInmuebles .buscadorCompleto .formulario .radioInmuebles, .gridContenedorInmuebles .buscadorCompleto .formulario .montoInmuebles, .resultadoUno, .resultadoDos, .resultadoTres {
+    .gridContenedorInmuebles .buscadorCompleto .formulario .radioInmuebles, .gridContenedorInmuebles .buscadorCompleto .formulario .montoInmuebles {
         flex-direction: column;
     }
 
     .resultadoUno img, .resultadoDos img, .resultadoTres img {
         width: 200px;
-        height: 150px;
-        align-self: center;
+        height: auto;
     }
+    
     /*cambios en inmobiliarias*/
 
-    .inmobiliariaUno, .inmobiliariaDos, .inmobiliariaTres {
-        flex-direction: column;
-        align-items: center;
+    .gridContenedorInmobiliarias section .inmobiliariaUno div p, .gridContenedorInmobiliarias section .inmobiliariaDos div p, .gridContenedorInmobiliarias section .inmobiliariaTres div p {
+        font-size: nth($tamano-letra, 7);
     }
 
     .gridContenedorInmobiliarias section .inmobiliariaUno div .botonInmobiliarias,
     .gridContenedorInmobiliarias section .inmobiliariaDos div .botonInmobiliarias,
     .gridContenedorInmobiliarias section .inmobiliariaTres div .botonInmobiliarias {
         margin-bottom: map-get($boton, margen);
+        font-size: nth($tamano-letra, 5);
     }
 
     .inmobiliariaUno .logo, .inmobiliariaDos .logo, .inmobiliariaTres .logo {
         width: 200px;
-        height: 200px;
+        height: auto;
     }
 
     .gridContenedorInmobiliarias section .buscadorInmobiliarias label .selectInput {
         width: 100px;
     }
-
+/*cambios en footer*/
     .pie .redes {
         width: 50vw;
     } 
@@ -101,6 +101,16 @@
 
 /*tamaño tablet posicion vertical*/
 @media screen and (max-width:760px) { 
+    /*cambios en index*/
+    .buscadorIndex .hero h1 {
+        font-size: nth($tamano-letra, 6);
+    }
+    .buscadorIndex .hero h2 {
+        font-size: nth($tamano-letra, 1);
+    }
+    .buscadorIndex .hero p {
+        font-size: nth($tamano-letra, 7);
+    }
     /*cambios en contacto*/
     .gridContenedorContacto {
         grid-template-columns: 0.4fr 1.3fr;
@@ -156,7 +166,8 @@
     }
     /*cambios en ingreso*/
     .mainIngreso .ingreso section h2, .mainIngreso .ingreso .ingresoNuevo h2 {
-        font-size: nth($tamano-letra, 1);
+        font-size: nth($tamano-letra, 2);
+        margin-top: 20px;
     }
 }
 
@@ -185,13 +196,27 @@
     .gridContenedorContacto .promocion {
         width: 80%;
     }
+/*cambios en ingreso*/
+    .mainIngreso .ingreso .ingresoNuevo .formularioIngreso a {
+        padding-bottom: 0;
+        padding-top: 0;
+        margin-top: 0;
+    }
 }
 
 /*mobile 540px*/
 @media screen and (max-width:540px) {
     /*cambios en index*/
-    .buscadorIndex section h1 {
-        font-size: nth($tamano-letra, 6);
+    .buscadorIndex .hero h1 {
+        font-size: nth($tamano-letra, 4);
+        padding: 5px;
+    }
+    .buscadorIndex .hero h2 {
+        font-size: nth($tamano-letra, 5);
+        padding: 5px;
+    }
+    .buscadorIndex .hero p {
+        padding: 5px;
     }
     .gridContenedorFormulario .monto {
         margin-top: map-get($boton, margen);
@@ -199,6 +224,23 @@
     .gridContenedorFormulario .select .selectInput {
         width: 40%;
     }
+    /*cambios en inmobiliarias*/
+    .gridContenedorInmobiliarias section .inmobiliariaUno, .gridContenedorInmobiliarias section .inmobiliariaDos, .gridContenedorInmobiliarias section .inmobiliariaTres {
+        flex-direction: column;
+        width: 70%;
+        align-items: center;
+        justify-content: space-around;
+        margin-left: 50px;
+    }
+
+    .gridContenedorInmobiliarias section {
+        align-items: center;
+    }
+    .gridContenedorInmobiliarias section .inmobiliariaUno .logo, .gridContenedorInmobiliarias section .inmobiliariaDos .logo, .gridContenedorInmobiliarias section .inmobiliariaTres .logo {
+        width: 100%;
+        
+    }
+
     /*cambios en ingreso*/
     .mainIngreso .ingreso {
         width: 80vw;
@@ -211,6 +253,14 @@
     .mainIngreso .ingreso section h2, .mainIngreso .ingreso .ingresoNuevo h2 {
         font-size: nth($tamano-letra, 5);
     }
+
+    .mainIngreso .ingreso .ingresoNuevo .formularioIngreso .datos label {
+        font-size: nth($tamano-letra, 7);
+    }
+    .mainIngreso .ingreso .ingresoNuevo .formularioIngreso .botonIngreso, .mainIngreso .ingreso section .registrarse .botonIngreso {
+        font-size: nth($tamano-letra, 5);
+    }
+    /*cambios en footer*/
     footer .redes {
         width: 80vw;
     }
@@ -223,10 +273,13 @@
         height: 40px;
 }
     /*cambios en index*/
-    .buscadorIndex section h1 {
-        font-size: nth($tamano-letra, 4);
+    .buscadorIndex .hero h2 {
+        padding: 2px;
     }
-
+    .buscadorIndex .hero p {
+        margin: 5px;
+        padding: 2px;
+    }
     .gridContenedorFormulario .monto {
         margin-left: 20px;
     }
@@ -269,13 +322,30 @@
         padding: 5px;
     }
 
+    .resultadoUno, .resultadoDos, .resultadoTres {
+        flex-direction: column;
+    }
+
+    .resultadoUno img, .resultadoDos img, .resultadoTres img {
+        width: 100%;
+    }
+
     /*cambios en inmobiliarias*/
     .gridContenedorInmobiliarias section .buscadorInmobiliarias label .selectInput {
         width: 100px;
     }
 
+    .gridContenedorInmobiliarias section .buscadorInmobiliarias .botonInmobiliarias, .gridContenedorInmobiliarias section .selectorUno  {
+        font-size: nth($tamano-letra, 5);
+    }
+
     .gridContenedorInmobiliarias .buscadorInmobiliarias {
         width: 70vw;
+    }
+
+    .gridContenedorInmobiliarias section .inmobiliariaUno, .gridContenedorInmobiliarias section .inmobiliariaDos, .gridContenedorInmobiliarias section .inmobiliariaTres {
+        margin-left: 10px;
+        width: 100%;
     }
     /*cambios en ingreso*/
     .mainIngreso .ingreso {
@@ -328,6 +398,10 @@
 
     .gridContenedorInmobiliarias section .buscadorInmobiliarias {
         width: 60vw;
+    }
+/*cambios en ingreso*/
+    .mainIngreso .ingreso .ingresoNuevo .formularioIngreso .botonIngreso, .mainIngreso .ingreso section .registrarse .botonIngreso {
+        font-size: nth($tamano-letra, 7);
     }
     /*cambios en footer*/
     footer .redes {

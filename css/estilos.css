@@ -5,23 +5,50 @@
   padding: 0;
   box-sizing: border-box; }
 
+header, header nav div div ul, .pie {
+  background-image: linear-gradient(30deg, #3C7566 12%, transparent 12.5%, transparent 87%, #3C7566 87.5%, #3C7566), linear-gradient(150deg, #3C7566 12%, transparent 12.5%, transparent 87%, #3C7566 87.5%, #3C7566), linear-gradient(30deg, #3C7566 12%, transparent 12.5%, transparent 87%, #3C7566 87.5%, #3C7566), linear-gradient(150deg, #3C7566 12%, transparent 12.5%, transparent 87%, #3C7566 87.5%, #3C7566), linear-gradient(60deg, #3C756677 25%, transparent 25.5%, transparent 75%, #3C756677 75%, #3C756677), linear-gradient(60deg, #3C756677 25%, transparent 25.5%, transparent 75%, #3C756677 75%, #3C756677);
+  background-size: 40px 70px;
+  background-position: 0 0, 0 0, 20px 35px, 20px 35px, 0 0, 20px 35px; }
+
+.buscadorIndex .hero h1, .buscadorIndex .hero h2, .buscadorIndex .hero p {
+  padding: 10px 5px;
+  margin: 5px;
+  backdrop-filter: blur(2px); }
+
+.buscadorIndex section .gridContenedorFormulario .buscador, .buscadorIndex section .gridContenedorFormulario .select, .mainIngreso .ingreso .ingresoNuevo h2, .mainIngreso .ingreso section h2 {
+  margin: 5px;
+  padding: 5px;
+  border: none; }
+
+.buscadorIndex section .gridContenedorFormulario .select .selectInput, .buscadorIndex section .gridContenedorFormulario .monto .divMonto .selectInput, .gridContenedorInmuebles .buscadorCompleto .formulario .montoInmuebles div .selectInput, .gridContenedorInmuebles .selector .selectSelector, .gridContenedorInmobiliarias section .buscadorInmobiliarias label .selectInput, .gridContenedorInmobiliarias section .selectorUno label .selectInput, .gridContenedorContacto .contacto form label .input {
+  padding: 5px;
+  margin: 5px;
+  border-radius: 8px; }
+
+.gridContenedorInmuebles .buscadorCompleto .formulario .radioInmuebles, .gridContenedorInmuebles .buscadorCompleto .formulario .selectInmuebles, .gridContenedorInmuebles .buscadorCompleto .formulario .montoInmuebles, .mainIngreso .ingreso .ingresoNuevo .formularioIngreso .datos label {
+  margin: 2px;
+  padding: 2px;
+  border: none; }
+
+.gridContenedorInmuebles .resultadoUno, .resultadoDos, .resultadoTres, .gridContenedorInmobiliarias section .inmobiliariaUno, .gridContenedorInmobiliarias section .inmobiliariaDos, .gridContenedorInmobiliarias section .inmobiliariaTres {
+  border-radius: 3%;
+  margin: 20px;
+  box-shadow: 4px 9px 24px 4px rgba(60, 117, 102, 0.73);
+  -webkit-box-shadow: 4px 9px 24px 4px rgba(60, 117, 102, 0.73);
+  -moz-box-shadow: 4px 9px 24px 4px rgba(60, 117, 102, 0.73); }
+
 /* selectores para todo el sitio*/
 .body {
   background-color: #C29689;
   min-height: 100vh; }
 
-.linea {
-  border-top: 2px solid #3C7566;
-  height: 2px;
-  max-width: 90vw;
-  padding: 0;
-  margin: auto; }
-
 /*HEADER*/
 header {
   display: flex;
   justify-content: space-between;
-  align-items: center; }
+  align-items: center;
+  opacity: 0.9;
+  background-color: #C29689; }
   header div a img {
     width: 80px;
     height: 80px;
@@ -43,8 +70,9 @@ header {
         font-size: 20px;
         padding: 5px;
         margin: 5px; }
-        header nav div div ul li a:visited {
-          color: #C25B3E; }
+        header nav div div ul li a:hover {
+          color: #C25B3E;
+          transition: 2s; }
       header nav div div ul li .boton {
         color: white;
         background-color: black;
@@ -66,14 +94,36 @@ header {
   justify-content: flex-start;
   align-items: center;
   flex-direction: column; }
-  .buscadorIndex section h1 {
-    font-family: "Lato", sans-serif;
-    font-weight: bold;
-    font-size: 40px;
-    padding: 10px 5px;
-    margin: 5px; }
-    .buscadorIndex section h1::first-letter {
-      font-family: "Cedarville Cursive", cursiva; }
+  .buscadorIndex .hero {
+    background-image: url("../img/background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    height: 70vh;
+    width: 100%; }
+    .buscadorIndex .hero h1 {
+      font-family: "Lato", sans-serif;
+      font-weight: bold;
+      font-size: 40px;
+      color: black; }
+      .buscadorIndex .hero h1::first-letter {
+        font-family: "Cedarville Cursive", cursiva; }
+    .buscadorIndex .hero h2 {
+      font-family: "Lato", sans-serif;
+      font-weight: bold;
+      font-size: 30px;
+      color: black; }
+    .buscadorIndex .hero p {
+      font-family: "Lato", sans-serif;
+      font-weight: bold;
+      font-size: 15px;
+      color: black;
+      width: 40vw; }
   .buscadorIndex section .gridContenedorFormulario {
     display: grid;
     grid-template-areas: "buscador buscador" "select select" "monto monto" "input input";
@@ -82,6 +132,7 @@ header {
     grid-row-gap: 5px;
     border: #3C7566 solid 2px;
     margin: 10px;
+    margin-top: 20px;
     border-radius: 3%;
     padding: 10px;
     padding-top: 20px;
@@ -93,11 +144,8 @@ header {
       justify-content: space-around;
       align-items: center;
       flex-direction: row;
-      margin: 5px;
       margin-top: 10px;
-      padding: 5px;
       padding-top: 10px;
-      border: none;
       font-family: "Lato", sans-serif;
       font-weight: bold;
       font-size: 20px;
@@ -108,9 +156,6 @@ header {
       justify-content: flex-start;
       align-items: center;
       flex-direction: column;
-      margin: 5px;
-      padding: 5px;
-      border: none;
       font-family: "Lato", sans-serif;
       font-weight: bold;
       font-size: 20px;
@@ -122,9 +167,6 @@ header {
       .buscadorIndex section .gridContenedorFormulario .select .selectInput {
         width: 30%;
         height: 40px;
-        padding: 5px;
-        margin: 5px;
-        border-radius: 8px;
         font-family: "Lato", sans-serif;
         font-weight: lighter;
         font-size: 20px; }
@@ -144,10 +186,7 @@ header {
       min-height: 20%; }
       .buscadorIndex section .gridContenedorFormulario .monto .divMonto .selectInput {
         width: 60%;
-        height: 30px;
-        padding: 5px;
-        margin: 5px;
-        border-radius: 8px; }
+        height: 30px; }
     .buscadorIndex section .gridContenedorFormulario .input {
       grid-area: input;
       display: flex;
@@ -201,9 +240,6 @@ header {
         justify-content: space-between;
         align-items: center;
         flex-direction: row;
-        margin: 2px;
-        padding: 2px;
-        border: none;
         font-family: "Lato", sans-serif;
         font-weight: bold;
         font-size: 20px;
@@ -221,9 +257,6 @@ header {
         justify-content: space-around;
         align-items: center;
         flex-direction: column;
-        margin: 2px;
-        padding: 2px;
-        border: none;
         font-family: "Lato", sans-serif;
         font-weight: bold;
         font-size: 20px;
@@ -242,10 +275,7 @@ header {
         justify-content: space-around;
         align-items: center;
         flex-direction: row;
-        margin: 2px;
         margin-left: 20px;
-        padding: 2px;
-        border: none;
         font-family: "Lato", sans-serif;
         font-weight: bold;
         font-size: 20px;
@@ -253,9 +283,6 @@ header {
         .gridContenedorInmuebles .buscadorCompleto .formulario .montoInmuebles div .selectInput {
           width: 150px;
           height: 30px;
-          padding: 5px;
-          margin: 5px;
-          border-radius: 8px;
           font-family: "Lato", sans-serif;
           font-weight: lighter;
           font-size: 15px; }
@@ -287,21 +314,13 @@ header {
     .gridContenedorInmuebles .selector .selectSelector {
       width: 150px;
       height: 30px;
-      padding: 5px;
-      margin: 5px;
-      border-radius: 8px;
       font-family: "Lato", sans-serif;
       font-weight: lighter;
       font-size: 15px; }
   .gridContenedorInmuebles .resultadoUno {
     grid-area: resultadoUno;
     display: flex;
-    border: #3C7566 solid 2px;
-    border-radius: 3%;
-    margin: 20px;
-    box-shadow: 4px 9px 24px 4px rgba(60, 117, 102, 0.73);
-    -webkit-box-shadow: 4px 9px 24px 4px rgba(60, 117, 102, 0.73);
-    -moz-box-shadow: 4px 9px 24px 4px rgba(60, 117, 102, 0.73); }
+    border: #3C7566 solid 2px; }
   .gridContenedorInmuebles img {
     width: 400px;
     height: 300px;
@@ -318,23 +337,20 @@ header {
     font-weight: bold;
     font-size: 20px;
     margin-left: 5px; }
+    .gridContenedorInmuebles .txtInput p {
+      margin: 4px; }
     .gridContenedorInmuebles .txtInput .botonResultado {
       color: white;
       background-color: black;
       padding: 10px;
       border-radius: 5%;
-      align-self: flex-end;
+      align-self: center;
       margin: 10px; }
 
 .resultadoDos {
   grid-area: resultadoDos;
   display: flex;
-  border: #3C7566 solid 2px;
-  border-radius: 3%;
-  margin: 20px;
-  box-shadow: 4px 9px 24px 4px rgba(60, 117, 102, 0.73);
-  -webkit-box-shadow: 4px 9px 24px 4px rgba(60, 117, 102, 0.73);
-  -moz-box-shadow: 4px 9px 24px 4px rgba(60, 117, 102, 0.73); }
+  border: #3C7566 solid 2px; }
   .resultadoDos img {
     width: 400px;
     height: 300px;
@@ -351,23 +367,20 @@ header {
     font-weight: bold;
     font-size: 20px;
     margin-left: 5px; }
+    .resultadoDos .txtInput p {
+      margin: 4px; }
     .resultadoDos .txtInput .botonResultado {
       color: white;
       background-color: black;
       padding: 10px;
       border-radius: 5%;
-      align-self: flex-end;
+      align-self: center;
       margin: 10px; }
 
 .resultadoTres {
   grid-area: resultadoTres;
   display: flex;
-  border: #3C7566 solid 2px;
-  border-radius: 3%;
-  margin: 20px;
-  box-shadow: 4px 9px 24px 4px rgba(60, 117, 102, 0.73);
-  -webkit-box-shadow: 4px 9px 24px 4px rgba(60, 117, 102, 0.73);
-  -moz-box-shadow: 4px 9px 24px 4px rgba(60, 117, 102, 0.73); }
+  border: #3C7566 solid 2px; }
   .resultadoTres img {
     width: 200px;
     height: 300px;
@@ -384,12 +397,14 @@ header {
     font-weight: bold;
     font-size: 20px;
     margin-left: 5px; }
+    .resultadoTres .txtInput p {
+      margin: 4px; }
     .resultadoTres .txtInput .botonResultado {
       color: white;
       background-color: black;
       padding: 10px;
       border-radius: 5%;
-      align-self: flex-end;
+      align-self: center;
       margin: 10px; }
 
 /*selectores de pagina inmobiliarias*/
@@ -406,7 +421,7 @@ header {
   .gridContenedorInmobiliarias section .buscadorInmobiliarias {
     grid-area: buscadorInmobiliarias;
     width: 20vw;
-    height: 30vh;
+    height: 40vh;
     border: #3C7566 solid 2px;
     margin: 10px;
     border-radius: 3%;
@@ -421,9 +436,6 @@ header {
     .gridContenedorInmobiliarias section .buscadorInmobiliarias label .selectInput {
       width: 150px;
       height: 30px;
-      padding: 5px;
-      margin: 5px;
-      border-radius: 8px;
       font-family: "Lato", sans-serif;
       font-weight: lighter;
       font-size: 15px; }
@@ -433,102 +445,106 @@ header {
       padding: 10px;
       border-radius: 5%;
       font-size: 20px;
-      font-family: "Lato", sans-serif; }
+      font-family: "Lato", sans-serif;
+      margin: 10px; }
   .gridContenedorInmobiliarias section .selectorUno {
     grid-area: selectorUno;
     display: flex;
     justify-content: flex-end;
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     font-weight: bold;
     font-size: 20px;
     margin-right: 20px; }
     .gridContenedorInmobiliarias section .selectorUno label .selectInput {
       width: 150px;
       height: 30px;
-      padding: 5px;
-      margin: 5px;
-      border-radius: 8px;
       font-family: "Lato", sans-serif;
       font-weight: lighter;
       font-size: 15px; }
   .gridContenedorInmobiliarias section .inmobiliariaUno {
     grid-area: inmobiliariaUno;
     display: flex;
-    border: #3C7566 solid 2px;
-    border-radius: 3%;
-    margin: 20px;
-    box-shadow: 4px 9px 24px 4px rgba(60, 117, 102, 0.73);
-    -webkit-box-shadow: 4px 9px 24px 4px rgba(60, 117, 102, 0.73);
-    -moz-box-shadow: 4px 9px 24px 4px rgba(60, 117, 102, 0.73); }
+    border: #3C7566 solid 2px; }
     .gridContenedorInmobiliarias section .inmobiliariaUno .logo {
       width: 250px;
-      height: 250px; }
-    .gridContenedorInmobiliarias section .inmobiliariaUno div p {
-      font-family: "Lato", sans-serif;
-      font-weight: bold;
-      font-size: 20px;
-      margin: 5px;
-      padding: 10px; }
-    .gridContenedorInmobiliarias section .inmobiliariaUno div .botonInmobiliarias {
-      color: white;
-      background-color: black;
-      padding: 10px;
-      border-radius: 5%;
-      font-size: 20px;
-      font-family: 'Lato', sans-serif;
-      margin-left: 20px; }
+      height: 250px;
+      border-radius: 3%; }
+    .gridContenedorInmobiliarias section .inmobiliariaUno div {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column; }
+      .gridContenedorInmobiliarias section .inmobiliariaUno div p {
+        font-family: "Lato", sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+        margin: 5px;
+        padding: 10px; }
+      .gridContenedorInmobiliarias section .inmobiliariaUno div .botonInmobiliarias {
+        color: white;
+        background-color: black;
+        padding: 10px;
+        border-radius: 5%;
+        font-size: 20px;
+        font-family: "Lato", sans-serif;
+        margin-left: 20px;
+        align-self: center; }
   .gridContenedorInmobiliarias section .inmobiliariaDos {
     grid-area: inmobiliariaDos;
     display: flex;
-    border: #3C7566 solid 2px;
-    border-radius: 3%;
-    margin: 20px;
-    box-shadow: 4px 9px 24px 4px rgba(60, 117, 102, 0.73);
-    -webkit-box-shadow: 4px 9px 24px 4px rgba(60, 117, 102, 0.73);
-    -moz-box-shadow: 4px 9px 24px 4px rgba(60, 117, 102, 0.73); }
+    border: #3C7566 solid 2px; }
     .gridContenedorInmobiliarias section .inmobiliariaDos .logo {
       width: 250px;
-      height: 250px; }
-    .gridContenedorInmobiliarias section .inmobiliariaDos div p {
-      font-family: "Lato", sans-serif;
-      font-weight: bold;
-      font-size: 20px;
-      margin: 5px;
-      padding: 10px; }
-    .gridContenedorInmobiliarias section .inmobiliariaDos div .botonInmobiliarias {
-      color: white;
-      background-color: black;
-      padding: 10px;
-      border-radius: 5%;
-      font-size: 20px;
-      font-family: 'Lato', sans-serif;
-      margin-left: 20px; }
+      height: 250px;
+      border-radius: 3%; }
+    .gridContenedorInmobiliarias section .inmobiliariaDos div {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column; }
+      .gridContenedorInmobiliarias section .inmobiliariaDos div p {
+        font-family: "Lato", sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+        margin: 5px;
+        padding: 10px; }
+      .gridContenedorInmobiliarias section .inmobiliariaDos div .botonInmobiliarias {
+        color: white;
+        background-color: black;
+        padding: 10px;
+        border-radius: 5%;
+        font-size: 20px;
+        font-family: "Lato", sans-serif;
+        margin-left: 20px;
+        align-self: center; }
   .gridContenedorInmobiliarias section .inmobiliariaTres {
     grid-area: inmobiliariaTres;
     display: flex;
-    border: #3C7566 solid 2px;
-    border-radius: 3%;
-    margin: 20px;
-    box-shadow: 4px 9px 24px 4px rgba(60, 117, 102, 0.73);
-    -webkit-box-shadow: 4px 9px 24px 4px rgba(60, 117, 102, 0.73);
-    -moz-box-shadow: 4px 9px 24px 4px rgba(60, 117, 102, 0.73); }
+    border: #3C7566 solid 2px; }
     .gridContenedorInmobiliarias section .inmobiliariaTres .logo {
       width: 250px;
-      height: 250px; }
-    .gridContenedorInmobiliarias section .inmobiliariaTres div p {
-      font-family: "Lato", sans-serif;
-      font-weight: bold;
-      font-size: 20px;
-      margin: 5px;
-      padding: 10px; }
-    .gridContenedorInmobiliarias section .inmobiliariaTres div .botonInmobiliarias {
-      color: white;
-      background-color: black;
-      padding: 10px;
-      border-radius: 5%;
-      font-size: 20px;
-      font-family: 'Lato', sans-serif;
-      margin-left: 20px; }
+      height: 250px;
+      border-radius: 3%; }
+    .gridContenedorInmobiliarias section .inmobiliariaTres div {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column; }
+      .gridContenedorInmobiliarias section .inmobiliariaTres div p {
+        font-family: "Lato", sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+        margin: 5px;
+        padding: 10px; }
+      .gridContenedorInmobiliarias section .inmobiliariaTres div .botonInmobiliarias {
+        color: white;
+        background-color: black;
+        padding: 10px;
+        border-radius: 5%;
+        font-size: 20px;
+        font-family: "Lato", sans-serif;
+        margin-left: 20px;
+        align-self: center; }
 
 /* selectores principalmente de contacto*/
 .gridContenedorContacto {
@@ -609,13 +625,11 @@ header {
       .gridContenedorContacto .contacto form label {
         width: 100%; }
         .gridContenedorContacto .contacto form label::first-letter {
-          font-family: "Cedarville Cursive", cursiva; }
+          font-family: "Cedarville Cursive", cursiva;
+          font-size: 25px; }
         .gridContenedorContacto .contacto form label .input {
           width: 80%;
           height: 30px;
-          padding: 5px;
-          margin: 5px;
-          border-radius: 8px;
           display: flex;
           justify-content: center;
           align-items: flex-start;
@@ -661,10 +675,8 @@ header {
       height: 100%; }
       .mainIngreso .ingreso .ingresoNuevo h2 {
         font-size: 25px;
-        padding: 5px;
         padding-top: 20px;
         margin-top: 20px;
-        margin: 5px;
         width: 100%;
         height: 70px;
         text-align: center;
@@ -680,22 +692,20 @@ header {
           justify-content: center;
           align-items: center;
           flex-direction: column;
-          max-height: 30%; }
+          max-height: 25%; }
           .mainIngreso .ingreso .ingresoNuevo .formularioIngreso .datos label {
-            padding: 5px;
-            margin: 5px;
             font-family: "Lato", sans-serif;
             font-weight: bold;
-            font-size: 20px; }
+            font-size: 18px; }
           .mainIngreso .ingreso .ingresoNuevo .formularioIngreso .datos .selectInput {
             width: 150px;
             height: 30px;
-            padding: 5px;
-            margin: 5px;
+            padding: 2px;
+            margin: 2px;
             border-radius: 8px;
             font-family: "Lato", sans-serif;
             font-weight: lighter;
-            font-size: 15px; }
+            font-size: 10px; }
         .mainIngreso .ingreso .ingresoNuevo .formularioIngreso .botonIngreso {
           text-decoration: none;
           color: white;
@@ -704,7 +714,8 @@ header {
           border-radius: 5%;
           align-self: center;
           justify-self: center;
-          margin-bottom: 20px; }
+          margin-bottom: 10px;
+          font-size: 18px; }
         .mainIngreso .ingreso .ingresoNuevo .formularioIngreso a {
           text-decoration: none;
           font-family: "Lato", sans-serif;
@@ -719,10 +730,8 @@ header {
       height: 100%; }
       .mainIngreso .ingreso section h2 {
         font-size: 25px;
-        padding: 5px;
         padding-top: 20px;
         margin-top: 20px;
-        margin: 5px;
         width: 100%;
         height: 70px;
         text-align: center;
@@ -742,10 +751,13 @@ header {
           border-radius: 5%;
           align-self: center;
           justify-self: center;
-          margin-bottom: 20px; }
+          margin-bottom: 20px;
+          font-size: 18px; }
 
 /*FOOTER*/
 .pie {
+  background-color: #C29689;
+  opacity: 0.9;
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -824,30 +836,37 @@ header {
   .gridContenedorInmuebles {
     grid-template-columns: 0.4fr 1fr;
     margin: 10px; }
-  .gridContenedorInmuebles .buscadorCompleto .formulario .radioInmuebles, .gridContenedorInmuebles .buscadorCompleto .formulario .montoInmuebles, .resultadoUno, .resultadoDos, .resultadoTres {
+  .gridContenedorInmuebles .buscadorCompleto .formulario .radioInmuebles, .gridContenedorInmuebles .buscadorCompleto .formulario .montoInmuebles {
     flex-direction: column; }
   .resultadoUno img, .resultadoDos img, .resultadoTres img {
     width: 200px;
-    height: 150px;
-    align-self: center; }
+    height: auto; }
   /*cambios en inmobiliarias*/
-  .inmobiliariaUno, .inmobiliariaDos, .inmobiliariaTres {
-    flex-direction: column;
-    align-items: center; }
+  .gridContenedorInmobiliarias section .inmobiliariaUno div p, .gridContenedorInmobiliarias section .inmobiliariaDos div p, .gridContenedorInmobiliarias section .inmobiliariaTres div p {
+    font-size: 10px; }
   .gridContenedorInmobiliarias section .inmobiliariaUno div .botonInmobiliarias,
   .gridContenedorInmobiliarias section .inmobiliariaDos div .botonInmobiliarias,
   .gridContenedorInmobiliarias section .inmobiliariaTres div .botonInmobiliarias {
-    margin-bottom: 10px; }
+    margin-bottom: 10px;
+    font-size: 15px; }
   .inmobiliariaUno .logo, .inmobiliariaDos .logo, .inmobiliariaTres .logo {
     width: 200px;
-    height: 200px; }
+    height: auto; }
   .gridContenedorInmobiliarias section .buscadorInmobiliarias label .selectInput {
     width: 100px; }
+  /*cambios en footer*/
   .pie .redes {
     width: 50vw; } }
 
 /*tamaño tablet posicion vertical*/
 @media screen and (max-width: 760px) {
+  /*cambios en index*/
+  .buscadorIndex .hero h1 {
+    font-size: 30px; }
+  .buscadorIndex .hero h2 {
+    font-size: 20px; }
+  .buscadorIndex .hero p {
+    font-size: 10px; }
   /*cambios en contacto*/
   .gridContenedorContacto {
     grid-template-columns: 0.4fr 1.3fr; }
@@ -880,7 +899,8 @@ header {
     width: 150px; }
   /*cambios en ingreso*/
   .mainIngreso .ingreso section h2, .mainIngreso .ingreso .ingresoNuevo h2 {
-    font-size: 20px; } }
+    font-size: 18px;
+    margin-top: 20px; } }
 
 /*mobile 630px*/
 @media screen and (max-width: 630px) {
@@ -896,17 +916,39 @@ header {
   .gridContenedorContacto .mapa iframe {
     height: 250px; }
   .gridContenedorContacto .promocion {
-    width: 80%; } }
+    width: 80%; }
+  /*cambios en ingreso*/
+  .mainIngreso .ingreso .ingresoNuevo .formularioIngreso a {
+    padding-bottom: 0;
+    padding-top: 0;
+    margin-top: 0; } }
 
 /*mobile 540px*/
 @media screen and (max-width: 540px) {
   /*cambios en index*/
-  .buscadorIndex section h1 {
-    font-size: 30px; }
+  .buscadorIndex .hero h1 {
+    font-size: 25px;
+    padding: 5px; }
+  .buscadorIndex .hero h2 {
+    font-size: 15px;
+    padding: 5px; }
+  .buscadorIndex .hero p {
+    padding: 5px; }
   .gridContenedorFormulario .monto {
     margin-top: 10px; }
   .gridContenedorFormulario .select .selectInput {
     width: 40%; }
+  /*cambios en inmobiliarias*/
+  .gridContenedorInmobiliarias section .inmobiliariaUno, .gridContenedorInmobiliarias section .inmobiliariaDos, .gridContenedorInmobiliarias section .inmobiliariaTres {
+    flex-direction: column;
+    width: 70%;
+    align-items: center;
+    justify-content: space-around;
+    margin-left: 50px; }
+  .gridContenedorInmobiliarias section {
+    align-items: center; }
+  .gridContenedorInmobiliarias section .inmobiliariaUno .logo, .gridContenedorInmobiliarias section .inmobiliariaDos .logo, .gridContenedorInmobiliarias section .inmobiliariaTres .logo {
+    width: 100%; }
   /*cambios en ingreso*/
   .mainIngreso .ingreso {
     width: 80vw; }
@@ -914,6 +956,11 @@ header {
     width: 100px; }
   .mainIngreso .ingreso section h2, .mainIngreso .ingreso .ingresoNuevo h2 {
     font-size: 15px; }
+  .mainIngreso .ingreso .ingresoNuevo .formularioIngreso .datos label {
+    font-size: 10px; }
+  .mainIngreso .ingreso .ingresoNuevo .formularioIngreso .botonIngreso, .mainIngreso .ingreso section .registrarse .botonIngreso {
+    font-size: 15px; }
+  /*cambios en footer*/
   footer .redes {
     width: 80vw; } }
 
@@ -924,8 +971,11 @@ header {
     width: 40px;
     height: 40px; }
   /*cambios en index*/
-  .buscadorIndex section h1 {
-    font-size: 25px; }
+  .buscadorIndex .hero h2 {
+    padding: 2px; }
+  .buscadorIndex .hero p {
+    margin: 5px;
+    padding: 2px; }
   .gridContenedorFormulario .monto {
     margin-left: 20px; }
   .gridContenedorFormulario .select .selectInput {
@@ -954,11 +1004,20 @@ header {
   .formulario .montoInmuebles div, .formulario .selectInmuebles {
     margin: 5px;
     padding: 5px; }
+  .resultadoUno, .resultadoDos, .resultadoTres {
+    flex-direction: column; }
+  .resultadoUno img, .resultadoDos img, .resultadoTres img {
+    width: 100%; }
   /*cambios en inmobiliarias*/
   .gridContenedorInmobiliarias section .buscadorInmobiliarias label .selectInput {
     width: 100px; }
+  .gridContenedorInmobiliarias section .buscadorInmobiliarias .botonInmobiliarias, .gridContenedorInmobiliarias section .selectorUno {
+    font-size: 15px; }
   .gridContenedorInmobiliarias .buscadorInmobiliarias {
     width: 70vw; }
+  .gridContenedorInmobiliarias section .inmobiliariaUno, .gridContenedorInmobiliarias section .inmobiliariaDos, .gridContenedorInmobiliarias section .inmobiliariaTres {
+    margin-left: 10px;
+    width: 100%; }
   /*cambios en ingreso*/
   .mainIngreso .ingreso {
     width: 90vw; } }
@@ -995,6 +1054,9 @@ header {
     margin-left: 10px; }
   .gridContenedorInmobiliarias section .buscadorInmobiliarias {
     width: 60vw; }
+  /*cambios en ingreso*/
+  .mainIngreso .ingreso .ingresoNuevo .formularioIngreso .botonIngreso, .mainIngreso .ingreso section .registrarse .botonIngreso {
+    font-size: 10px; }
   /*cambios en footer*/
   footer .redes {
     justify-content: center;

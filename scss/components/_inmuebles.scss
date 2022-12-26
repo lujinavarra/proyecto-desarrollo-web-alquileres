@@ -1,5 +1,3 @@
-@import "../base/variables";
-
 /*selectores de pagina inmuebles*/
 .gridContenedorInmuebles {
     display: grid;
@@ -35,9 +33,7 @@
             .radioInmuebles {
                 @include flex (flex, space-between, center);
                 flex-direction: row;
-                margin: 2px;
-                padding: 2px;
-                border: none;
+                @extend %boxBuscadorInmuebles;
                 font-family: $fuente-principal;
                 font-weight: bold;
                 font-size: nth($tamano-letra, 1);
@@ -54,9 +50,7 @@
             .selectInmuebles {
                 @include flex (flex, space-around, center);
                 flex-direction: column;
-                margin: 2px;
-                padding: 2px;
-                border: none;
+                @extend %boxBuscadorInmuebles;
                 font-family: $fuente-principal;
                 font-weight: bold;
                 font-size: nth($tamano-letra, 1);
@@ -75,10 +69,8 @@
             .montoInmuebles {
                 @include flex (flex, space-around, center);
                 flex-direction: row;
-                margin: 2px;
+                @extend %boxBuscadorInmuebles;
                 margin-left: 20px;
-                padding: 2px;
-                border: none;
                 font-family: $fuente-principal;
                 font-weight: bold;
                 font-size: nth($tamano-letra, 1);
@@ -87,9 +79,7 @@
                     .selectInput {
                         width: 150px;
                         height: 30px;
-                        padding: 5px;
-                        margin: 5px;
-                        border-radius: 8px;
+                        @extend %boxSelectInput;
                         font-family: $fuente-principal;
                         font-weight: lighter;
                         font-size: nth($tamano-letra, 5);
@@ -131,9 +121,7 @@
         .selectSelector {
             width: 150px;
             height: 30px;
-            padding: 5px;
-            margin: 5px;
-            border-radius: 8px;
+            @extend %boxSelectInput;
             font-family: $fuente-principal;
             font-weight: lighter;
             font-size: nth($tamano-letra, 5);
@@ -143,11 +131,7 @@
         grid-area: resultadoUno;
         display: flex;
         border: nth($colores, 2) solid 2px;
-        border-radius: 3%;
-        margin: 20px;
-        box-shadow: 4px 9px 24px 4px rgba(60, 117, 102, 0.73);
-        -webkit-box-shadow: 4px 9px 24px 4px rgba(60, 117, 102, 0.73);
-        -moz-box-shadow: 4px 9px 24px 4px rgba(60, 117, 102, 0.73);}
+        @extend %resultadoInmuebles;}
         img {
             width: 400px;
             height: 300px;
@@ -164,12 +148,15 @@
             font-weight: bold;
             font-size: nth($tamano-letra, 1);
             margin-left: 5px;
+            p {
+                margin: 4px;
+            }
             .botonResultado {
                 color: nth($colores, 4);
                 background-color: nth($colores, 5);
                 padding: map-get($boton, relleno);
                 border-radius: map-get($boton, redondeado);
-                align-self: flex-end;
+                align-self: center;
                 margin: map-get($boton, margen);
             }
         }
@@ -178,11 +165,7 @@
         grid-area: resultadoDos;
         display: flex;
         border: nth($colores, 2) solid 2px;
-        border-radius: 3%;
-        margin: 20px;
-        box-shadow: 4px 9px 24px 4px rgba(60, 117, 102, 0.73);
-        -webkit-box-shadow: 4px 9px 24px 4px rgba(60, 117, 102, 0.73);
-        -moz-box-shadow: 4px 9px 24px 4px rgba(60, 117, 102, 0.73);
+        @extend %resultadoInmuebles;
         img {
             width: 400px;
             height: 300px;
@@ -199,12 +182,15 @@
             font-weight: bold;
             font-size: nth($tamano-letra, 1);
             margin-left: 5px;
+            p {
+                margin: 4px;
+            }
             .botonResultado {
                 color: nth($colores, 4);
                 background-color: nth($colores, 5);
                 padding: map-get($boton, relleno);
                 border-radius: map-get($boton, redondeado);
-                align-self: flex-end;
+                align-self: center;
                 margin: map-get($boton, margen);
             }
         }
@@ -213,11 +199,7 @@
         grid-area: resultadoTres;
         display: flex;
         border: nth($colores, 2) solid 2px;
-        border-radius: 3%;
-        margin: 20px;
-        box-shadow: 4px 9px 24px 4px rgba(60, 117, 102, 0.73);
-        -webkit-box-shadow: 4px 9px 24px 4px rgba(60, 117, 102, 0.73);
-        -moz-box-shadow: 4px 9px 24px 4px rgba(60, 117, 102, 0.73);
+        @extend %resultadoInmuebles;
         img {
             width: 200px;
             height: 300px;
@@ -226,7 +208,6 @@
             &:hover{
                 transform: scale(1.2);
             }
-
         }
         .txtInput {
             @include flex (flex, center, flex-start);
@@ -235,12 +216,15 @@
             font-weight: bold;
             font-size: nth($tamano-letra, 1);
             margin-left: 5px;
+            p {
+                margin: 4px;
+            }
             .botonResultado {
                 color: nth($colores, 4);
                 background-color: nth($colores, 5);
                 padding: map-get($boton, relleno);
                 border-radius: map-get($boton, redondeado);
-                align-self: flex-end;
+                align-self: center;
                 margin: map-get($boton, margen);
             }
         }

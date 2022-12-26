@@ -1,5 +1,3 @@
-@import "../base/variables";
-
 /* MAIN*/
 
 .main {
@@ -10,16 +8,40 @@
 .buscadorIndex {
     @include flex (flex, flex-start, center);
     flex-direction: column;
-    section {
+    .hero {
+        background-image: url("../img/background.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        @include flex (flex, flex-start, center);
+        flex-direction: column;
+        height: 70vh;
+        width: 100%;
         h1{
             font-family: $fuente-principal;
             font-weight: bold;
             font-size: nth($tamano-letra, 3);
-            padding: 10px 5px;
-            margin: 5px;
+            color: nth($colores, 5);
+            @extend %textoHeroSection;
             &::first-letter {
                 font-family: $fuente-secundaria;
             }
+        }
+        h2 {
+            font-family: $fuente-principal;
+            font-weight: bold;
+            font-size: nth($tamano-letra, 6);
+            color: nth($colores, 5);
+            @extend %textoHeroSection;
+        }
+        p {
+            font-family: $fuente-principal;
+            font-weight: bold;
+            font-size: nth($tamano-letra, 5);
+            color: nth($colores, 5);
+            @extend %textoHeroSection;
+            width: 40vw;
         }
     }
     section {
@@ -35,6 +57,7 @@
             grid-row-gap: 5px;
             border: nth($colores, 2) solid 2px;
             margin: map-get($boton, margen);
+            margin-top: 20px;
             border-radius: 3%;
             padding: map-get($boton, relleno);
             padding-top: 20px;
@@ -44,11 +67,9 @@
                 grid-area: buscador;
                 @include flex(flex, space-around, center);
                 flex-direction: row;
-                margin: 5px;
+                @extend %boxBuscador;
                 margin-top: map-get($boton, margen);
-                padding: 5px;
                 padding-top: map-get($boton, relleno);
-                border: none;
                 font-family: $fuente-principal;
                 font-weight: bold;
                 font-size: nth($tamano-letra, 1);
@@ -58,9 +79,7 @@
                 grid-area: select;
                 @include flex(flex, flex-start, center);
                 flex-direction: column;
-                margin: 5px;
-                padding: 5px;
-                border: none;
+                @extend %boxBuscador;
                 font-family: $fuente-principal;
                 font-weight: bold;
                 font-size: nth($tamano-letra, 1);
@@ -73,9 +92,7 @@
                 .selectInput {
                     width: 30%;
                     height: 40px;
-                    padding: 5px;
-                    margin: 5px;
-                    border-radius: 8px;
+                    @extend %boxSelectInput;
                     font-family: $fuente-principal;
                     font-weight: lighter;
                     font-size: nth($tamano-letra, 1);
@@ -97,9 +114,7 @@
                     .selectInput {
                         width: 60%;
                         height: 30px;
-                        padding: 5px;
-                        margin: 5px;
-                        border-radius: 8px;
+                        @extend %boxSelectInput;
                     }
                 }
             }

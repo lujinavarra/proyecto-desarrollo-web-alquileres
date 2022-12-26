@@ -1,5 +1,3 @@
-@import "../base/variables";
-
 /*selectores de la pagina de ingreso*/
 
 .mainIngreso {
@@ -21,10 +19,9 @@
             height: 100%;
             h2 {
                 font-size: nth($tamano-letra, 4);
-                padding: 5px;
+                @extend %boxBuscador;
                 padding-top: 20px;
                 margin-top: 20px;
-                margin: 5px;
                 width: 100%;
                 height: 70px;
                 text-align: center;
@@ -39,23 +36,22 @@
                 .datos {
                     @include flex (flex, center, center);
                     flex-direction: column;
-                    max-height: 30%;
+                    max-height: 25%;
                     label {
-                        padding: 5px;
-                        margin: 5px;
+                        @extend %boxBuscadorInmuebles;
                         font-family: $fuente-principal;
                         font-weight: bold;
-                        font-size: nth($tamano-letra, 1);
+                        font-size: nth($tamano-letra, 2);
                     }
                     .selectInput {
                         width: 150px;
                         height: 30px;
-                        padding: 5px;
-                        margin: 5px;
+                        padding: 2px;
+                        margin: 2px;
                         border-radius: 8px;
                         font-family: $fuente-principal;
                         font-weight: lighter;
-                        font-size: nth($tamano-letra, 5);
+                        font-size: nth($tamano-letra, 7);
                     }
                 }
                 .botonIngreso {
@@ -66,7 +62,8 @@
                     border-radius: map-get($boton, redondeado);
                     align-self: center;
                     justify-self: center;
-                    margin-bottom: 20px;
+                    margin-bottom: map-get($boton, margen);
+                    font-size: nth($tamano-letra, 2);
                 }
                 a {
                     text-decoration: none;
@@ -85,10 +82,9 @@
             height: 100%;
             h2 {
                 font-size: nth($tamano-letra, 4);
-                padding: 5px;
+                @extend %boxBuscador;
                 padding-top: 20px;
                 margin-top: 20px;
-                margin: 5px;
                 width: 100%;
                 height: 70px;
                 text-align: center;
@@ -108,6 +104,7 @@
                     align-self: center;
                     justify-self: center;
                     margin-bottom: 20px;
+                    font-size: nth($tamano-letra, 2);
                 }
             }
         }

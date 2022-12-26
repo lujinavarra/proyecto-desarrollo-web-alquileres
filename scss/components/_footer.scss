@@ -1,6 +1,8 @@
-@import "../base/variables";
 /*FOOTER*/
 .pie {
+    background-color: nth($colores, 1);
+    opacity: 0.9;
+    @extend %dibujo-background;
     @include flex (flex, center, center);
     .redes {
         @include flex (flex, space-between, center);
