@@ -160,7 +160,12 @@
     .gridContenedorInmobiliarias section .buscadorInmobiliarias {
         width: 40vw;
     }
-
+    .gridContenedorInmobiliarias section .selectorUno {
+        justify-content: center;
+    }
+    .gridContenedorInmobiliarias section .selectorUno label .selectInput {
+        width: 100px;
+    }
     .gridContenedorInmobiliarias section .buscadorInmobiliarias label .selectInput {
         width: 150px;
     }
