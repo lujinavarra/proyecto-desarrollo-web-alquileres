@@ -19,7 +19,7 @@ header {
                 ul {
                     @include flex (flex, space-between, center);
                     background-color: nth($colores, 1);
-                    @extend %dibujo-background;
+                    // @extend %dibujo-background;
                     padding: 0;
                     margin: 0;
                     li {
